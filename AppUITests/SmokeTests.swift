@@ -26,6 +26,17 @@ final class SmokeTests: XCTestCase {
         }
     }
 
+    /// iOS offers to save the password after a sign-in: decline, it covers the map.
+    private func dismissSavePassword() {
+        let springboard = XCUIApplication(bundleIdentifier: "com.apple.springboard")
+        for label in ["Not Now", "Pas maintenant"] {
+            for target in [app.buttons[label], springboard.buttons[label]] where target.waitForExistence(timeout: 4) {
+                target.tap()
+                return
+            }
+        }
+    }
+
     /// Scrolls until [element] can be tapped (the forms are in scroll views).
     private func reveal(_ element: XCUIElement) {
         for _ in 0..<4 where !element.isHittable { app.swipeUp() }
@@ -61,6 +72,7 @@ final class SmokeTests: XCTestCase {
 
         let map = app.otherElements["map"]
         XCTAssertTrue(map.waitForExistence(timeout: 20), "signed in, the map shows")
+        dismissSavePassword()
         // Give the OpenFreeMap tiles a moment.
         sleep(6)
         shot("05-map")

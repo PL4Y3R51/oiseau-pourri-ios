@@ -152,6 +152,7 @@ private struct IntroPage: View {
 
     var body: some View {
         let intro = intro(slide)
+        GeometryReader { geo in
         ScrollView {
             VStack(spacing: 10) {
                 Stage(intro: intro, color: slide.color, tilt: slide.tilt)
@@ -169,9 +170,10 @@ private struct IntroPage: View {
             .frame(maxWidth: 480)
             .padding(.horizontal, 28)
             .padding(.vertical, 8)
-            .frame(maxWidth: .infinity)
+            .frame(maxWidth: .infinity, minHeight: geo.size.height)
         }
         .scrollBounceBehavior(.basedOnSize)
+        }
     }
 }
 

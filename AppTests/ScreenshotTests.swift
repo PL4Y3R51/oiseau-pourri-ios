@@ -19,6 +19,7 @@ final class ScreenshotTests: XCTestCase {
         let window = scene.map { UIWindow(windowScene: $0) } ?? UIWindow(frame: frame)
         window.frame = frame
         let host = UIHostingController(rootView: view.environment(AppModel.preview(signedIn: signedIn)).tint(Zine.ink))
+        if size != nil { host.safeAreaRegions = [] }
         window.rootViewController = host
         window.isHidden = false
         host.view.frame = frame

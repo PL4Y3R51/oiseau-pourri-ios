@@ -75,11 +75,8 @@ jobs:
             2>&1 | tee build.log | xcbeautify --renderer github-actions
 
       - name: Test (unit, screenshots, UI smoke)
-        env:
-          TEST_RUNNER_SCREENSHOT_DIR: ${{ github.workspace }}/artifacts/screenshots
         run: |
           set -o pipefail
-          mkdir -p artifacts/screenshots
           xcodebuild test-without-building \
             -project OiseauPourri.xcodeproj -scheme OiseauPourri \
             -destination "${{ steps.sim.outputs.destination }}" \
@@ -87,13 +84,23 @@ jobs:
             -resultBundlePath artifacts/Tests.xcresult \
             2>&1 | tee test.log | xcbeautify --renderer github-actions
 
-      - name: Screenshots from the result bundle too
+      - name: Screenshots out of the result bundle
         if: always()
         run: |
-          if [ -d artifacts/Tests.xcresult ]; then
-            xcrun xcresulttool export attachments --path artifacts/Tests.xcresult --output-path artifacts/attachments || true
-          fi
-          ls -R artifacts | head -80 || true
+          [ -d artifacts/Tests.xcresult ] || exit 0
+          xcrun xcresulttool export attachments --path artifacts/Tests.xcresult --output-path artifacts/attachments
+          # Name each PNG after its attachment (the test's own name), drop the UUID suffix.
+          python3 - <<'EOF'
+          import json, os, re, shutil
+          src, dst = "artifacts/attachments", "artifacts/screenshots"
+          os.makedirs(dst, exist_ok=True)
+          for test in json.load(open(f"{src}/manifest.json")):
+              for a in test["attachments"]:
+                  if a["exportedFileName"].endswith(".png"):
+                      name = re.sub(r"_\d+_[0-9A-F-]{36}", "", a.get("suggestedHumanReadableName") or a["exportedFileName"])
+                      shutil.copy(f"{src}/{a['exportedFileName']}", f"{dst}/{name}")
+          print("\n".join(sorted(os.listdir(dst))))
+          EOF
 
       - name: Errors in the summary
         if: failure()
@@ -112,7 +119,6 @@ jobs:
           name: ios-${{ github.run_number }}
           path: |
             artifacts/screenshots
-            artifacts/attachments
             build.log
             test.log
           if-no-files-found: warn

@@ -76,8 +76,23 @@ struct OpButtonStyle: ButtonStyle {
             .padding(.vertical, 12)
             .frame(maxWidth: fullWidth ? .infinity : nil, minHeight: 48)
             .background(fill)
-            .relief(shape, sunk: configuration.isPressed, outline: enabled)
+            .modifier(ButtonRelief(shape: shape, pressed: configuration.isPressed, enabled: enabled))
             .animation(.easeOut(duration: 0.08), value: configuration.isPressed)
+    }
+}
+
+/// In relief while it can be pressed; flat, without outline or shadow, when disabled.
+private struct ButtonRelief<S: Shape>: ViewModifier {
+    let shape: S
+    let pressed: Bool
+    let enabled: Bool
+
+    func body(content: Content) -> some View {
+        if enabled {
+            content.relief(shape, sunk: pressed)
+        } else {
+            content.clipShape(shape)
+        }
     }
 }
 
