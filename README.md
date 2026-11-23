@@ -54,3 +54,18 @@ run. Screenshots and logs are uploaded as the run's artifact.
   of the API's test suite are decoded in `ContractTests`.
 - Unreachable is offline (issue #89 in the main repository): no network, a 5xx or a timeout
   never signs the player out or wipes the saved map.
+
+## Sur un vrai iPhone (sans compte développeur payant)
+
+Each CI run uploads `ipa-<run>`: `OiseauPourri-unsigned.ipa`, a Release build talking to
+`https://oiseaupourri.ch`, unsigned. To put it on your own iPhone (iOS 17+) with a free
+Apple ID:
+
+1. Download it: `gh run download <run-id> -n ipa-<run-number>` (or from the run's page).
+2. Sign and install it with a sideloading tool (Sideloadly or AltStore, on Windows or a Mac)
+   and your Apple ID, the iPhone plugged in.
+3. On the iPhone: Réglages ▸ Confidentialité et sécurité ▸ Mode développeur, then trust
+   your Apple ID under Réglages ▸ Général ▸ VPN et gestion de l'appareil.
+
+With a free Apple ID the install lasts 7 days, push notifications and links that open the
+app don't work. Those need the paid Apple Developer Program.

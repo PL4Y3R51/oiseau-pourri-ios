@@ -111,7 +111,7 @@ jobs:
           {
             echo '### iOS build / test errors'
             echo '```'
-            cat build.log test.log 2>/dev/null | grep -E 'error:|warning: .*(deprecated|unused)|failed|XCTAssert' | grep -v '^ld: warning' | sort -u | head -80
+            cat build.log test.log device.log 2>/dev/null | grep -E 'error:|warning: .*(deprecated|unused)|failed|XCTAssert' | grep -v '^ld: warning' | sort -u | head -80
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
 
