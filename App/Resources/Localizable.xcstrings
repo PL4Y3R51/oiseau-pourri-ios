@@ -1,0 +1,6019 @@
+{
+  "sourceLanguage": "fr",
+  "strings": {
+    "account_change_avatar": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Changer la photo de profil"
+          }
+        }
+      }
+    },
+    "account_change_email": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Changer l'adresse"
+          }
+        }
+      }
+    },
+    "account_change_password": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Changer le mot de passe"
+          }
+        }
+      }
+    },
+    "account_current_password": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mot de passe actuel"
+          }
+        }
+      }
+    },
+    "account_danger": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zone dangereuse"
+          }
+        }
+      }
+    },
+    "account_danger_help": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Supprime définitivement ton compte et tes données personnelles (trouvailles, photos, préférences). Tes oiseaux posés resteront sur la carte, anonymisés."
+          }
+        }
+      }
+    },
+    "account_data": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mes données"
+          }
+        }
+      }
+    },
+    "account_data_help": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Télécharge une archive (ZIP) de tes données personnelles : profil, oiseaux posés, trouvailles, signalements, liste de souhait, préférences et photos."
+          }
+        }
+      }
+    },
+    "account_delete": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Supprimer mon compte"
+          }
+        }
+      }
+    },
+    "account_delete_birds": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tes oiseaux posés resteront sur la carte, attribués à « Compte supprimé » et sans photo de pose, pour ne pas casser les collections des autres joueurs."
+          }
+        }
+      }
+    },
+    "account_delete_busy": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suppression…"
+          }
+        }
+      }
+    },
+    "account_delete_confirm": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Supprimer définitivement"
+          }
+        }
+      }
+    },
+    "account_delete_failed": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Échec de la suppression"
+          }
+        }
+      }
+    },
+    "account_delete_intro": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cette action est définitive. Seront supprimés :"
+          }
+        }
+      }
+    },
+    "account_delete_items.0": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ton compte et ton adresse e-mail ;"
+          }
+        }
+      }
+    },
+    "account_delete_items.1": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "tes trouvailles et leurs photos ;"
+          }
+        }
+      }
+    },
+    "account_delete_items.2": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "tes photos de pose et de signalement ;"
+          }
+        }
+      }
+    },
+    "account_delete_items.3": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ta liste de souhait et tes préférences."
+          }
+        }
+      }
+    },
+    "account_delete_password": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Confirme avec ton mot de passe"
+          }
+        }
+      }
+    },
+    "account_delete_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Supprimer ton compte ?"
+          }
+        }
+      }
+    },
+    "account_email": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adresse e-mail"
+          }
+        }
+      }
+    },
+    "account_email_landed_approved": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Changement autorisé. Un e-mail part vers la nouvelle adresse."
+          }
+        }
+      }
+    },
+    "account_email_landed_verified": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adresse confirmée."
+          }
+        }
+      }
+    },
+    "account_email_requested": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ouvre le lien envoyé à la nouvelle adresse pour finaliser le changement."
+          }
+        }
+      }
+    },
+    "account_email_requested_verified": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Demande enregistrée. Ouvre le lien envoyé à ton adresse actuelle pour l'autoriser, puis celui envoyé à la nouvelle."
+          }
+        }
+      }
+    },
+    "account_email_unverified": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ — non confirmée"
+          }
+        }
+      }
+    },
+    "account_email_verified": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ — confirmée"
+          }
+        }
+      }
+    },
+    "account_export": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Télécharger mes données"
+          }
+        }
+      }
+    },
+    "account_export_busy": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Préparation…"
+          }
+        }
+      }
+    },
+    "account_export_failed": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le téléchargement a échoué. Réessaie dans un moment."
+          }
+        }
+      }
+    },
+    "account_export_file": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "oiseau-pourri-export-%1$@.zip"
+          }
+        }
+      }
+    },
+    "account_export_saved": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Archive enregistrée."
+          }
+        }
+      }
+    },
+    "account_failed": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Échec, réessaie."
+          }
+        }
+      }
+    },
+    "account_new_email": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nouvelle adresse"
+          }
+        }
+      }
+    },
+    "account_new_password": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nouveau mot de passe"
+          }
+        }
+      }
+    },
+    "account_password_saved": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mot de passe mis à jour."
+          }
+        }
+      }
+    },
+    "account_profile": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profil"
+          }
+        }
+      }
+    },
+    "account_profile_saved": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profil mis à jour."
+          }
+        }
+      }
+    },
+    "account_resend": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Renvoyer l'e-mail de confirmation"
+          }
+        }
+      }
+    },
+    "account_verification_sent": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "E-mail de confirmation envoyé."
+          }
+        }
+      }
+    },
+    "admin_clear": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "effacer"
+          }
+        }
+      }
+    },
+    "admin_simulate": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Simuler ma position"
+          }
+        }
+      }
+    },
+    "admin_tap_hint": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Touchez la carte pour vous y téléporter."
+          }
+        }
+      }
+    },
+    "admin_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Admin"
+          }
+        }
+      }
+    },
+    "auth_error_credentials": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "E-mail ou mot de passe incorrect."
+          }
+        }
+      }
+    },
+    "auth_error_email": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adresse e-mail invalide."
+          }
+        }
+      }
+    },
+    "auth_error_exists": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Un compte existe déjà avec cet e-mail."
+          }
+        }
+      }
+    },
+    "auth_error_link": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lien invalide ou expiré. Refais la demande."
+          }
+        }
+      }
+    },
+    "auth_error_long": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mot de passe trop long : 128 caractères maximum."
+          }
+        }
+      }
+    },
+    "auth_error_password": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mot de passe incorrect."
+          }
+        }
+      }
+    },
+    "auth_error_rate": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trop de tentatives. Réessaie dans quelques secondes."
+          }
+        }
+      }
+    },
+    "auth_error_short": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mot de passe trop court : 8 caractères minimum."
+          }
+        }
+      }
+    },
+    "brand_mascot": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La mascotte oiseau pourri"
+          }
+        }
+      }
+    },
+    "brand_name": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oiseau pourri"
+          }
+        }
+      }
+    },
+    "catch_caught_body": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajouté à ta collection…"
+          }
+        }
+      }
+    },
+    "catch_caught_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Attrapé !"
+          }
+        }
+      }
+    },
+    "catch_queued_body": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pas de connexion : ta trouvaille part dès que le réseau revient. Ne désinstalle pas l’app d’ici là."
+          }
+        }
+      }
+    },
+    "catch_queued_body_server": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le serveur ne répond pas : ta trouvaille part dès qu’il revient. Ne désinstalle pas l’app d’ici là."
+          }
+        }
+      }
+    },
+    "catch_queued_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gardé au chaud"
+          }
+        }
+      }
+    },
+    "catch_reported_body": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le poseur ira vérifier."
+          }
+        }
+      }
+    },
+    "catch_reported_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Signalé !"
+          }
+        }
+      }
+    },
+    "charter_1_body": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "C'est toi qui choisis où tu colles - et c'est à toi de t'informer, avant chaque pose, si coller à cet endroit est autorisé ou non. Oiseau pourri n'est en aucun cas responsable de tes collages."
+          }
+        }
+      }
+    },
+    "charter_1_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La pose est sous ta responsabilité"
+          }
+        }
+      }
+    },
+    "charter_2_body": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Si ta pose concerne une propriété privée, utilise l'option « propriété privée » pour que les chasseurs sachent respecter les lieux."
+          }
+        }
+      }
+    },
+    "charter_2_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Protège les propriétés privées"
+          }
+        }
+      }
+    },
+    "charter_3_body": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pas de personnes identifiables sur tes photos sans leur accord. Et souviens-toi : ta photo de pose est visible par tous les joueurs."
+          }
+        }
+      }
+    },
+    "charter_3_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Respecte le droit à l'image"
+          }
+        }
+      }
+    },
+    "charter_accept": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Je m'engage"
+          }
+        }
+      }
+    },
+    "charter_read_full": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lire la charte complète"
+          }
+        }
+      }
+    },
+    "collection_all_countries": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tous les pays"
+          }
+        }
+      }
+    },
+    "collection_card_archived": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Archivé"
+          }
+        }
+      }
+    },
+    "collection_card_placed": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Posé le %1$@"
+          }
+        }
+      }
+    },
+    "collection_card_pose": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pose"
+          }
+        }
+      }
+    },
+    "collection_card_reported": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Signalé"
+          }
+        }
+      }
+    },
+    "collection_card_trophy": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trophée"
+          }
+        }
+      }
+    },
+    "collection_countries": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pays"
+          }
+        }
+      }
+    },
+    "collection_countries_selected": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%ld sélectionné"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%ld sélectionnés"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%ld sélectionnés"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "collection_dir_a_z": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A → Z"
+          }
+        }
+      }
+    },
+    "collection_dir_least_found": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Moins trouvés"
+          }
+        }
+      }
+    },
+    "collection_dir_most_found": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Plus trouvés"
+          }
+        }
+      }
+    },
+    "collection_dir_oldest": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Plus anciens"
+          }
+        }
+      }
+    },
+    "collection_dir_recent": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Plus récents"
+          }
+        }
+      }
+    },
+    "collection_dir_z_a": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Z → A"
+          }
+        }
+      }
+    },
+    "collection_empty_filtered": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucun oiseau pourri dans ce filtre."
+          }
+        }
+      }
+    },
+    "collection_empty_found": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucune trouvaille pour l'instant. Pars à la chasse !"
+          }
+        }
+      }
+    },
+    "collection_empty_hidden": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu n'as encore caché aucun oiseau pourri."
+          }
+        }
+      }
+    },
+    "collection_filters": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Filtres"
+          }
+        }
+      }
+    },
+    "collection_filters_a11y": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Filtrer la collection"
+          }
+        }
+      }
+    },
+    "collection_group": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Grouper"
+          }
+        }
+      }
+    },
+    "collection_group_a11y": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Regrouper la collection"
+          }
+        }
+      }
+    },
+    "collection_group_by": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Regrouper par"
+          }
+        }
+      }
+    },
+    "collection_group_country": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pays"
+          }
+        }
+      }
+    },
+    "collection_group_month": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mois"
+          }
+        }
+      }
+    },
+    "collection_group_none": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucun"
+          }
+        }
+      }
+    },
+    "collection_order": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ordre"
+          }
+        }
+      }
+    },
+    "collection_reports": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Signalements"
+          }
+        }
+      }
+    },
+    "collection_sort": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trier"
+          }
+        }
+      }
+    },
+    "collection_sort_a11y": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trier la collection"
+          }
+        }
+      }
+    },
+    "collection_sort_alpha": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alphabétique"
+          }
+        }
+      }
+    },
+    "collection_sort_by": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trier par"
+          }
+        }
+      }
+    },
+    "collection_sort_date": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Date"
+          }
+        }
+      }
+    },
+    "collection_sort_finds": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trouvailles"
+          }
+        }
+      }
+    },
+    "collection_stat_countries": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$ld pays"
+          }
+        }
+      }
+    },
+    "collection_stat_finds": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%ld trouvaille"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%ld trouvailles"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%ld trouvailles"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "collection_status": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Statut"
+          }
+        }
+      }
+    },
+    "collection_status_active": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Actifs"
+          }
+        }
+      }
+    },
+    "collection_status_archived": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Archivés"
+          }
+        }
+      }
+    },
+    "collection_tab_found": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trouvés (%1$ld)"
+          }
+        }
+      }
+    },
+    "collection_tab_hidden": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cachés (%1$ld)"
+          }
+        }
+      }
+    },
+    "collection_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ma collection"
+          }
+        }
+      }
+    },
+    "collection_to_check": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "À vérifier (%1$ld)"
+          }
+        }
+      }
+    },
+    "collection_unknown_country": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pays inconnu"
+          }
+        }
+      }
+    },
+    "common_actions": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Actions"
+          }
+        }
+      }
+    },
+    "common_back": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Retour"
+          }
+        }
+      }
+    },
+    "common_cancel": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annuler"
+          }
+        }
+      }
+    },
+    "common_close": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fermer"
+          }
+        }
+      }
+    },
+    "common_delete": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Supprimer"
+          }
+        }
+      }
+    },
+    "common_edit": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modifier"
+          }
+        }
+      }
+    },
+    "common_enlarge_photo": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Agrandir la photo"
+          }
+        }
+      }
+    },
+    "common_loading": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chargement…"
+          }
+        }
+      }
+    },
+    "common_next": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suivant"
+          }
+        }
+      }
+    },
+    "common_skip": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Passer"
+          }
+        }
+      }
+    },
+    "content_locale": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "fr-CH"
+          }
+        }
+      }
+    },
+    "delete_body": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Les trouvailles associées seront aussi supprimées. Cette action est irréversible."
+          }
+        }
+      }
+    },
+    "delete_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Supprimer cet oiseau pourri ?"
+          }
+        }
+      }
+    },
+    "detail_delete_irreversible": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cette action est irréversible."
+          }
+        }
+      }
+    },
+    "detail_delete_warning": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Il disparaîtra aussi de la collection de la personne qui l'a trouvé. Cette action est irréversible."
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Il disparaîtra aussi de la collection des %ld personnes qui l'ont trouvé. Cette action est irréversible."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Il disparaîtra aussi de la collection des %ld personnes qui l'ont trouvé. Cette action est irréversible."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "detail_finder_caption": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ - %2$@"
+          }
+        }
+      }
+    },
+    "detail_finder_trophy_a11y": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voir le trophée de %1$@"
+          }
+        }
+      }
+    },
+    "detail_finders": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Qui l'a trouvé"
+          }
+        }
+      }
+    },
+    "detail_found_archived": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cet oiseau pourri a été retiré du monde - il reste dans ta collection."
+          }
+        }
+      }
+    },
+    "detail_found_on": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trouvé le %1$@"
+          }
+        }
+      }
+    },
+    "detail_meta": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ · %2$@"
+          }
+        }
+      }
+    },
+    "detail_no_finders": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Personne ne l'a encore trouvé."
+          }
+        }
+      }
+    },
+    "detail_no_pose_photo": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucune photo de pose"
+          }
+        }
+      }
+    },
+    "detail_placed_archived": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Archivé - retiré de la carte des chasseurs"
+          }
+        }
+      }
+    },
+    "detail_placed_on": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Posé le %1$@"
+          }
+        }
+      }
+    },
+    "detail_radius": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rayon de découverte : %1$ld m"
+          }
+        }
+      }
+    },
+    "detail_report_confirm": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Confirmer"
+          }
+        }
+      }
+    },
+    "detail_report_confirm_a11y": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Confirmer la disparition (archive l'oiseau)"
+          }
+        }
+      }
+    },
+    "detail_report_dismiss": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toujours là"
+          }
+        }
+      }
+    },
+    "detail_report_dismiss_a11y": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toujours là - rejeter le signalement"
+          }
+        }
+      }
+    },
+    "detail_report_photo_a11y": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voir la photo de %1$@"
+          }
+        }
+      }
+    },
+    "detail_report_proof": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preuve - %1$@"
+          }
+        }
+      }
+    },
+    "detail_reported": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Signalé comme disparu (%1$ld)"
+          }
+        }
+      }
+    },
+    "detail_their_pose": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La pose de %1$@"
+          }
+        }
+      }
+    },
+    "detail_when_online": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Disponible une fois en ligne."
+          }
+        }
+      }
+    },
+    "detail_your_trophy": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ton trophée"
+          }
+        }
+      }
+    },
+    "edit_busy": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enregistrement…"
+          }
+        }
+      }
+    },
+    "edit_error_empty_name": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le nom du lieu ne peut pas être vide."
+          }
+        }
+      }
+    },
+    "edit_error_locked": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cet oiseau a déjà été trouvé : sa position ne peut plus changer."
+          }
+        }
+      }
+    },
+    "edit_error_too_far": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Repositionnement trop loin de la position initiale"
+          }
+        }
+      }
+    },
+    "edit_error_window": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modification fermée - seule la propriété privée reste modifiable après 5 min."
+          }
+        }
+      }
+    },
+    "edit_locked": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le délai de modification du texte est écoulé."
+          }
+        }
+      }
+    },
+    "edit_minutes_left": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le texte est modifiable encore ~%1$ld min après la pose."
+          }
+        }
+      }
+    },
+    "edit_name_placeholder": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nom du lieu"
+          }
+        }
+      }
+    },
+    "edit_position_frozen": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quelqu'un a déjà trouvé cet oiseau : sa position est figée."
+          }
+        }
+      }
+    },
+    "edit_reposition": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Repositionner (optionnel)"
+          }
+        }
+      }
+    },
+    "edit_reposition_help": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Déplace la carte pour corriger l'emplacement (max %1$ld m de la position d'origine). Possible tant que personne n'a trouvé cet oiseau — pratique quand il a été posé hors ligne, sans carte."
+          }
+        }
+      }
+    },
+    "edit_save": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enregistrer"
+          }
+        }
+      }
+    },
+    "edit_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modifier l'oiseau pourri"
+          }
+        }
+      }
+    },
+    "error_network": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Impossible de joindre le serveur. Vérifie ta connexion."
+          }
+        }
+      }
+    },
+    "error_server_down": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le serveur ne répond pas. Réessaie dans un moment."
+          }
+        }
+      }
+    },
+    "find_error_already": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cet oiseau pourri est déjà dans votre collection."
+          }
+        }
+      }
+    },
+    "find_error_archived": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cet oiseau pourri a été retiré, impossible de le trouver."
+          }
+        }
+      }
+    },
+    "find_error_network": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Impossible d’envoyer la trouvaille, ni de la garder sur cet appareil."
+          }
+        }
+      }
+    },
+    "find_error_too_far": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vous n'êtes pas assez proche de l'oiseau pourri. Rapprochez-vous !"
+          }
+        }
+      }
+    },
+    "forgot_kicker": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mot de passe oublié"
+          }
+        }
+      }
+    },
+    "forgot_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pas de panique"
+          }
+        }
+      }
+    },
+    "gallery_row": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ · %2$@"
+          }
+        }
+      }
+    },
+    "gallery_subtitle": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Plusieurs sont superposés - choisis lequel ouvrir."
+          }
+        }
+      }
+    },
+    "gallery_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%ld oiseau pourri ici"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%ld oiseaux pourris ici"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%ld oiseaux pourris ici"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "hunt_allow_location": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Autoriser la localisation"
+          }
+        }
+      }
+    },
+    "hunt_bad_photo": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Impossible de lire cette photo."
+          }
+        }
+      }
+    },
+    "hunt_chosen_photo": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Photo choisie"
+          }
+        }
+      }
+    },
+    "hunt_find_busy": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Validation…"
+          }
+        }
+      }
+    },
+    "hunt_find_photo": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Photo sur place (trophée)"
+          }
+        }
+      }
+    },
+    "hunt_find_submit": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Valider la trouvaille"
+          }
+        }
+      }
+    },
+    "hunt_find_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trouver l'oiseau pourri"
+          }
+        }
+      }
+    },
+    "hunt_find_visibility": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ta photo sera visible par la personne qui a caché cet oiseau pourri."
+          }
+        }
+      }
+    },
+    "hunt_located": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Position acquise (±%1$ld m)"
+          }
+        }
+      }
+    },
+    "hunt_locating": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Acquisition de la position…"
+          }
+        }
+      }
+    },
+    "hunt_missing": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Position GPS et photo requises"
+          }
+        }
+      }
+    },
+    "hunt_no_position": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Position introuvable : vérifie que la localisation est activée."
+          }
+        }
+      }
+    },
+    "hunt_note": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Note (facultatif)"
+          }
+        }
+      }
+    },
+    "hunt_note_count": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$ld / %2$ld"
+          }
+        }
+      }
+    },
+    "hunt_note_placeholder": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ce que tu as constaté sur place…"
+          }
+        }
+      }
+    },
+    "hunt_proof": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preuve"
+          }
+        }
+      }
+    },
+    "hunt_report_busy": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Envoi…"
+          }
+        }
+      }
+    },
+    "hunt_report_photo": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Photo du lieu (preuve)"
+          }
+        }
+      }
+    },
+    "hunt_report_submit": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Envoyer le signalement"
+          }
+        }
+      }
+    },
+    "hunt_report_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Signaler comme disparu"
+          }
+        }
+      }
+    },
+    "hunt_report_visibility": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ton signalement et ta photo seront visibles par la personne qui a posé cet oiseau pourri."
+          }
+        }
+      }
+    },
+    "kind_archived": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Retiré"
+          }
+        }
+      }
+    },
+    "kind_available": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "À trouver"
+          }
+        }
+      }
+    },
+    "kind_found": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dans ta collection"
+          }
+        }
+      }
+    },
+    "kind_mine": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le tien"
+          }
+        }
+      }
+    },
+    "kofi_link": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Soutenir le projet sur Ko-fi"
+          }
+        }
+      }
+    },
+    "leaderboard_abroad": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Étranger"
+          }
+        }
+      }
+    },
+    "leaderboard_all": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tout"
+          }
+        }
+      }
+    },
+    "leaderboard_count_found": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%ld trouvaille"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%ld trouvailles"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%ld trouvailles"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "leaderboard_count_placed": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%ld oiseau pourri"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%ld oiseaux pourris"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%ld oiseaux pourris"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "leaderboard_empty": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Personne au classement pour l’instant."
+          }
+        }
+      }
+    },
+    "leaderboard_empty_abroad_all": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Personne à l’étranger pour l’instant."
+          }
+        }
+      }
+    },
+    "leaderboard_empty_abroad_month": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Personne à l’étranger ce mois-ci."
+          }
+        }
+      }
+    },
+    "leaderboard_empty_abroad_year": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Personne à l’étranger cette année."
+          }
+        }
+      }
+    },
+    "leaderboard_empty_all_period": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Personne pour l’instant."
+          }
+        }
+      }
+    },
+    "leaderboard_empty_month": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Personne ce mois-ci."
+          }
+        }
+      }
+    },
+    "leaderboard_empty_year": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Personne cette année."
+          }
+        }
+      }
+    },
+    "leaderboard_finders": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trouveurs"
+          }
+        }
+      }
+    },
+    "leaderboard_month": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mois"
+          }
+        }
+      }
+    },
+    "leaderboard_order": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Envie de poser ?"
+          }
+        }
+      }
+    },
+    "leaderboard_placers": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Poseurs"
+          }
+        }
+      }
+    },
+    "leaderboard_year": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Année"
+          }
+        }
+      }
+    },
+    "legal_cgu": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "CGU"
+          }
+        }
+      }
+    },
+    "legal_charter": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Charte du pourrisseur"
+          }
+        }
+      }
+    },
+    "legal_privacy": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Confidentialité"
+          }
+        }
+      }
+    },
+    "legal_privacy_link": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "politique de confidentialité"
+          }
+        }
+      }
+    },
+    "legal_terms_link": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "conditions d'utilisation"
+          }
+        }
+      }
+    },
+    "login_accept_terms": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "J'accepte les %1$@ et la %2$@."
+          }
+        }
+      }
+    },
+    "login_back": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Retour à la connexion"
+          }
+        }
+      }
+    },
+    "login_busy": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "…"
+          }
+        }
+      }
+    },
+    "login_email": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "E-mail"
+          }
+        }
+      }
+    },
+    "login_failed": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Échec de la connexion"
+          }
+        }
+      }
+    },
+    "login_forgot": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mot de passe oublié ?"
+          }
+        }
+      }
+    },
+    "login_kicker": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connexion"
+          }
+        }
+      }
+    },
+    "login_name": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nom affiché"
+          }
+        }
+      }
+    },
+    "login_password": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mot de passe"
+          }
+        }
+      }
+    },
+    "login_password_hint": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "8 caractères minimum"
+          }
+        }
+      }
+    },
+    "login_reset_sent": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Si un compte existe pour %1$@, un lien de réinitialisation vient d'être envoyé. Pense à vérifier tes spams."
+          }
+        }
+      }
+    },
+    "login_send_failed": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Échec de l'envoi"
+          }
+        }
+      }
+    },
+    "login_submit_forgot": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Envoyer le lien"
+          }
+        }
+      }
+    },
+    "login_submit_login": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se connecter"
+          }
+        }
+      }
+    },
+    "login_submit_register": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "S'inscrire"
+          }
+        }
+      }
+    },
+    "login_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Te revoilà !"
+          }
+        }
+      }
+    },
+    "login_to_login": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Déjà un compte ? Se connecter"
+          }
+        }
+      }
+    },
+    "login_to_register": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pas de compte ? Créer un compte"
+          }
+        }
+      }
+    },
+    "map_filter_found": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mes trouvailles"
+          }
+        }
+      }
+    },
+    "map_filter_mine": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mes oiseaux"
+          }
+        }
+      }
+    },
+    "map_filter_reported": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Signalés"
+          }
+        }
+      }
+    },
+    "map_filter_to_find": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "À chercher"
+          }
+        }
+      }
+    },
+    "map_filter_wishlist": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liste de souhait"
+          }
+        }
+      }
+    },
+    "map_filters": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Filtres"
+          }
+        }
+      }
+    },
+    "map_filters_empty": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucun oiseau à filtrer"
+          }
+        }
+      }
+    },
+    "map_filters_reset": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Réinitialiser"
+          }
+        }
+      }
+    },
+    "map_filters_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afficher"
+          }
+        }
+      }
+    },
+    "map_loading": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chargement de la carte…"
+          }
+        }
+      }
+    },
+    "map_locate_me": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Me localiser"
+          }
+        }
+      }
+    },
+    "map_menu": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Menu de la carte"
+          }
+        }
+      }
+    },
+    "map_menu_closed": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "fermé"
+          }
+        }
+      }
+    },
+    "map_menu_open": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ouvert"
+          }
+        }
+      }
+    },
+    "map_show_archived": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afficher les archivés"
+          }
+        }
+      }
+    },
+    "map_show_private": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afficher les propriétés privées"
+          }
+        }
+      }
+    },
+    "map_style_bright": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vif et contrasté"
+          }
+        }
+      }
+    },
+    "map_style_failed": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Impossible de charger le fond de carte. Vérifie ta connexion."
+          }
+        }
+      }
+    },
+    "map_style_liberty": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Coloré et détaillé"
+          }
+        }
+      }
+    },
+    "map_style_positron": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clair et minimaliste"
+          }
+        }
+      }
+    },
+    "map_wishlist": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liste de souhait"
+          }
+        }
+      }
+    },
+    "map_wishlist_empty": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ta liste de souhait est vide."
+          }
+        }
+      }
+    },
+    "menu_archive": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Archiver"
+          }
+        }
+      }
+    },
+    "menu_open_collection": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ouvrir dans ma collection"
+          }
+        }
+      }
+    },
+    "menu_placer_profile": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voir le profil du poseur"
+          }
+        }
+      }
+    },
+    "menu_private_off": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Retirer la propriété privée"
+          }
+        }
+      }
+    },
+    "menu_private_on": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Marquer propriété privée"
+          }
+        }
+      }
+    },
+    "menu_report": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Signaler disparu"
+          }
+        }
+      }
+    },
+    "menu_unarchive": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Réactiver"
+          }
+        }
+      }
+    },
+    "menu_wishlist_add": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajouter à la liste de souhait"
+          }
+        }
+      }
+    },
+    "menu_wishlist_remove": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Retirer de la liste de souhait"
+          }
+        }
+      }
+    },
+    "offline_maps_add": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajouter une zone"
+          }
+        }
+      }
+    },
+    "offline_maps_auto": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Autour de chez toi"
+          }
+        }
+      }
+    },
+    "offline_maps_auto_help": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Environ 3 km autour de l’endroit où tu ouvres le plus souvent l’app, mis à jour en Wi-Fi seulement. Ta position reste sur ce téléphone."
+          }
+        }
+      }
+    },
+    "offline_maps_auto_name": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Autour de chez toi"
+          }
+        }
+      }
+    },
+    "offline_maps_auto_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Automatique"
+          }
+        }
+      }
+    },
+    "offline_maps_budget": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ sur %2$@"
+          }
+        }
+      }
+    },
+    "offline_maps_detail_quartier": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quartier"
+          }
+        }
+      }
+    },
+    "offline_maps_detail_ville": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ville"
+          }
+        }
+      }
+    },
+    "offline_maps_download": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Télécharger"
+          }
+        }
+      }
+    },
+    "offline_maps_downloading": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Téléchargement… %1$ld %%"
+          }
+        }
+      }
+    },
+    "offline_maps_estimate": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Environ %1$@"
+          }
+        }
+      }
+    },
+    "offline_maps_failed": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le téléchargement a échoué. Réessaie avec du réseau."
+          }
+        }
+      }
+    },
+    "offline_maps_frame": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cadre la zone à garder : tout ce qui est à l’écran sera téléchargé. « Quartier » garde les rues et les chemins, « Ville » seulement les routes."
+          }
+        }
+      }
+    },
+    "offline_maps_hint": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Garder des zones de carte sur le téléphone"
+          }
+        }
+      }
+    },
+    "offline_maps_incomplete": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Incomplète : à reprendre avec du réseau."
+          }
+        }
+      }
+    },
+    "offline_maps_intro": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sans réseau, la carte ne montre que les zones gardées sur ton téléphone. Tout le reste du jeu marche sans réseau : trouvailles, poses et le reste partent dès que ça revient."
+          }
+        }
+      }
+    },
+    "offline_maps_none": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucune zone pour l’instant."
+          }
+        }
+      }
+    },
+    "offline_maps_other_style": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gardée en style %1$@, pas celui de ta carte."
+          }
+        }
+      }
+    },
+    "offline_maps_redownload": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Retélécharger"
+          }
+        }
+      }
+    },
+    "offline_maps_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cartes hors ligne"
+          }
+        }
+      }
+    },
+    "offline_maps_too_big": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Environ %1$@ : trop pour la place qui reste. Rapproche-toi, choisis « Ville » ou supprime une zone."
+          }
+        }
+      }
+    },
+    "offline_maps_zone_meta": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ · %2$@ · %3$@"
+          }
+        }
+      }
+    },
+    "offline_maps_zones": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zones gardées"
+          }
+        }
+      }
+    },
+    "order_address_other": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comment veux-tu les recevoir ?"
+          }
+        }
+      }
+    },
+    "order_address_post": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adresse postale"
+          }
+        }
+      }
+    },
+    "order_address_privacy": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ton adresse n'est utilisée que pour cet envoi : elle est effacée dès que la commande est traitée ou annulée."
+          }
+        }
+      }
+    },
+    "order_cancel": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annuler ma commande"
+          }
+        }
+      }
+    },
+    "order_delivery": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Livraison"
+          }
+        }
+      }
+    },
+    "order_error_address": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Indique comment recevoir tes oiseaux."
+          }
+        }
+      }
+    },
+    "order_error_cancel": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annulation impossible : la commande a peut-être déjà été traitée."
+          }
+        }
+      }
+    },
+    "order_error_pending": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu as déjà une commande en cours."
+          }
+        }
+      }
+    },
+    "order_error_quantity": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Indique un nombre d’oiseaux entre 1 et %1$ld."
+          }
+        }
+      }
+    },
+    "order_error_send": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Envoi impossible. Vérifie les champs et réessaie."
+          }
+        }
+      }
+    },
+    "order_error_where": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Indique où récupérer tes oiseaux."
+          }
+        }
+      }
+    },
+    "order_history": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Historique des commandes"
+          }
+        }
+      }
+    },
+    "order_history_empty": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu n'as pas encore passé de commande."
+          }
+        }
+      }
+    },
+    "order_history_failed": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chargement impossible. Réessaie."
+          }
+        }
+      }
+    },
+    "order_intro": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu n'as plus d'oiseaux à poser ? Dis-nous combien tu en veux et comment les recevoir : on traite ta commande à la main."
+          }
+        }
+      }
+    },
+    "order_message": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Message (facultatif)"
+          }
+        }
+      }
+    },
+    "order_mode_hand": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Main propre"
+          }
+        }
+      }
+    },
+    "order_mode_other": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Autre"
+          }
+        }
+      }
+    },
+    "order_mode_post": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Poste"
+          }
+        }
+      }
+    },
+    "order_more": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voir plus"
+          }
+        }
+      }
+    },
+    "order_quantity": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nombre d'oiseaux (max %1$ld)"
+          }
+        }
+      }
+    },
+    "order_quantity_label": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%ld oiseau pourri"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%ld oiseaux pourris"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%ld oiseaux pourris"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "order_sent": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Commande envoyée ! Un e-mail de confirmation vient de t'être adressé."
+          }
+        }
+      }
+    },
+    "order_status_cancelled": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Annulée"
+          }
+        }
+      }
+    },
+    "order_status_declined": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Refusée"
+          }
+        }
+      }
+    },
+    "order_status_line": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ · commandée le %2$@"
+          }
+        }
+      }
+    },
+    "order_status_pending": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En attente de traitement"
+          }
+        }
+      }
+    },
+    "order_status_sent": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Envoyée"
+          }
+        }
+      }
+    },
+    "order_submit": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Envoyer ma commande"
+          }
+        }
+      }
+    },
+    "order_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Commande"
+          }
+        }
+      }
+    },
+    "order_where": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Où les récupérer ?"
+          }
+        }
+      }
+    },
+    "order_where_placeholder": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ex. : au café de la gare, mardi à 18h"
+          }
+        }
+      }
+    },
+    "photo_pick": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choisir une image"
+          }
+        }
+      }
+    },
+    "photo_take": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prendre une photo"
+          }
+        }
+      }
+    },
+    "place_adjust": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Déplace la carte pour cibler l'endroit exact sous le point."
+          }
+        }
+      }
+    },
+    "place_adjusted": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Déplace la carte pour cibler l'endroit exact sous le point - ajusté à %1$ld m de ta position."
+          }
+        }
+      }
+    },
+    "place_auto": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Auto"
+          }
+        }
+      }
+    },
+    "place_auto_description": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remplir avec l'adresse détectée"
+          }
+        }
+      }
+    },
+    "place_back_to_map": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Retour à la carte"
+          }
+        }
+      }
+    },
+    "place_busy": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Envoi…"
+          }
+        }
+      }
+    },
+    "place_description": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Description (optionnel)"
+          }
+        }
+      }
+    },
+    "place_error_address": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adresse introuvable, saisis un nom à la main."
+          }
+        }
+      }
+    },
+    "place_error_address_offline": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Adresse indisponible pour l’instant : saisis un nom à la main, ou laisse vide (il sera complété à l’envoi)."
+          }
+        }
+      }
+    },
+    "place_error_network": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Impossible d’envoyer l’oiseau, ni de le garder sur cet appareil."
+          }
+        }
+      }
+    },
+    "place_error_photo": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajoute une photo de la pose."
+          }
+        }
+      }
+    },
+    "place_error_too_far": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Placement trop loin de ta position"
+          }
+        }
+      }
+    },
+    "place_hint": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Indice (optionnel)"
+          }
+        }
+      }
+    },
+    "place_name": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lieu"
+          }
+        }
+      }
+    },
+    "place_name_help": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Donne un nom au lieu, ou utilise « Auto » pour l'adresse. Si tu laisses vide, l'adresse détectée sera utilisée."
+          }
+        }
+      }
+    },
+    "place_name_placeholder": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nom du lieu (ou laisse vide)"
+          }
+        }
+      }
+    },
+    "place_no_position": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Position GPS indisponible"
+          }
+        }
+      }
+    },
+    "place_order": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Commander des oiseaux pourris"
+          }
+        }
+      }
+    },
+    "place_photo": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Photo de la pose"
+          }
+        }
+      }
+    },
+    "place_photo_visibility": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cette photo sera visible par tous les joueurs"
+          }
+        }
+      }
+    },
+    "place_private": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Propriété privée"
+          }
+        }
+      }
+    },
+    "place_private_help": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Affiché avec une maison sur la carte ; aide à respecter les lieux privés."
+          }
+        }
+      }
+    },
+    "place_queued_body": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ton oiseau est enregistré sur cet appareil. Il sera posé sur la carte dès que le réseau revient — les autres joueurs ne le voient pas encore."
+          }
+        }
+      }
+    },
+    "place_queued_body_server": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le serveur ne répond pas, mais ton oiseau est enregistré sur cet appareil. Il sera posé sur la carte dès que le serveur revient — les autres joueurs ne le voient pas encore."
+          }
+        }
+      }
+    },
+    "place_queued_note": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu peux fermer l'app, mais ne la désinstalle pas d'ici là. L'envoi se fait tout seul."
+          }
+        }
+      }
+    },
+    "place_submit": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Poser l'oiseau pourri ici"
+          }
+        }
+      }
+    },
+    "place_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Poser un oiseau pourri"
+          }
+        }
+      }
+    },
+    "placement_pin": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Point de pose"
+          }
+        }
+      }
+    },
+    "prefs_display": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Affichage"
+          }
+        }
+      }
+    },
+    "prefs_hide_spoilers": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Masquer les photos « spoiler » sur la carte"
+          }
+        }
+      }
+    },
+    "prefs_hide_spoilers_help": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Les photos de pose ne s'affichent plus du tout avant la trouvaille - pas même floutées."
+          }
+        }
+      }
+    },
+    "prefs_map_style": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Style de carte"
+          }
+        }
+      }
+    },
+    "prefs_map_style_help": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choisis l'apparence de la carte."
+          }
+        }
+      }
+    },
+    "prefs_notifications": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notifications"
+          }
+        }
+      }
+    },
+    "prefs_notifications_enable": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Activer les notifications"
+          }
+        }
+      }
+    },
+    "prefs_notifications_manage": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gérer dans les réglages Android"
+          }
+        }
+      }
+    },
+    "prefs_notifications_off": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Les notifications sont coupées : tu ne sauras pas quand on trouve tes oiseaux."
+          }
+        }
+      }
+    },
+    "prefs_notifications_on": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu es prévenu·e quand on trouve ou qu'on signale un de tes oiseaux. Chaque type se coupe dans les réglages Android."
+          }
+        }
+      }
+    },
+    "profile_bird_archived": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cet oiseau pourri a été retiré du monde."
+          }
+        }
+      }
+    },
+    "profile_bird_found": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu l’as trouvé"
+          }
+        }
+      }
+    },
+    "profile_bird_mine": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ton oiseau"
+          }
+        }
+      }
+    },
+    "profile_bird_not_found": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pas encore trouvé"
+          }
+        }
+      }
+    },
+    "profile_bird_on_map": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voir sur la carte"
+          }
+        }
+      }
+    },
+    "profile_bird_open": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@, %2$@ : ouvrir"
+          }
+        }
+      }
+    },
+    "profile_bird_photo_caption": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La pose de %1$@"
+          }
+        }
+      }
+    },
+    "profile_bird_seen": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "trouvé"
+          }
+        }
+      }
+    },
+    "profile_bird_unseen": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "pas encore trouvé"
+          }
+        }
+      }
+    },
+    "profile_birds": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oiseaux posés"
+          }
+        }
+      }
+    },
+    "profile_birds_empty": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucun oiseau posé pour l’instant."
+          }
+        }
+      }
+    },
+    "profile_birds_empty_mine": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu n’as encore posé aucun oiseau."
+          }
+        }
+      }
+    },
+    "profile_birds_mine": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mes oiseaux posés"
+          }
+        }
+      }
+    },
+    "profile_birds_more": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voir plus (%1$ld)"
+          }
+        }
+      }
+    },
+    "profile_found": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%ld trouvé"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%ld trouvés"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%ld trouvés"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "profile_mine": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mon profil"
+          }
+        }
+      }
+    },
+    "profile_not_found": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utilisateur introuvable."
+          }
+        }
+      }
+    },
+    "profile_placed": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%ld posé"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%ld posés"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%ld posés"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "profile_settings": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Réglages"
+          }
+        }
+      }
+    },
+    "profile_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profil"
+          }
+        }
+      }
+    },
+    "push_channel_finds": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trouvailles de tes oiseaux"
+          }
+        }
+      }
+    },
+    "push_channel_finds_help": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quand quelqu'un trouve un oiseau pourri que tu as posé."
+          }
+        }
+      }
+    },
+    "push_channel_reports": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Signalements de tes oiseaux"
+          }
+        }
+      }
+    },
+    "push_channel_reports_help": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quand quelqu'un signale qu'un de tes oiseaux a disparu."
+          }
+        }
+      }
+    },
+    "push_find_body": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ a trouvé ton oiseau pourri « %2$@ »."
+          }
+        }
+      }
+    },
+    "push_find_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ton oiseau a été trouvé !"
+          }
+        }
+      }
+    },
+    "push_report_body": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quelqu'un ne trouve plus « %1$@ ». Va vérifier !"
+          }
+        }
+      }
+    },
+    "push_report_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ton oiseau a été signalé disparu"
+          }
+        }
+      }
+    },
+    "reach_collapse": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Réduire le bandeau"
+          }
+        }
+      }
+    },
+    "reach_expand": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Afficher le détail"
+          }
+        }
+      }
+    },
+    "reach_hint": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu peux continuer à jouer : tout part dès que ça revient."
+          }
+        }
+      }
+    },
+    "reach_offline": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hors ligne"
+          }
+        }
+      }
+    },
+    "reach_server_down": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le serveur ne répond pas"
+          }
+        }
+      }
+    },
+    "reach_slim": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mode hors connexion"
+          }
+        }
+      }
+    },
+    "release_0_1_items.0": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Une vraie app Android : connexion, inscription et ton compte habituel."
+          }
+        }
+      }
+    },
+    "release_0_1_items.1": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thème sombre ou clair au choix, et quatre icônes d'app à choisir dans les Réglages."
+          }
+        }
+      }
+    },
+    "release_0_1_items.2": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La carte, la chasse et la pose d'oiseaux, ta collection, tes badges et le classement, en natif."
+          }
+        }
+      }
+    },
+    "release_0_1_items.3": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sans réseau, tes trouvailles et tes poses sont gardées au chaud et partent toutes seules dès qu'il revient."
+          }
+        }
+      }
+    },
+    "release_0_1_items.4": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Une notification quand quelqu'un trouve un de tes oiseaux."
+          }
+        }
+      }
+    },
+    "release_0_1_items.5": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Les liens oiseaupourri.ch, ceux de nos e-mails compris, s'ouvrent directement dans l'app."
+          }
+        }
+      }
+    },
+    "release_0_1_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oiseau pourri arrive sur Android"
+          }
+        }
+      }
+    },
+    "release_0_2_items.0": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Les badges font peau neuve, en trois familles : à paliers (bronze, argent, or, platine, puis Maître), exploits, et badges uniques qui n’existent qu’en un exemplaire au monde."
+          }
+        }
+      }
+    },
+    "release_0_2_items.1": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nouveaux badges uniques pour les poses : le 1er, le 10e, le 25e… oiseau pourri posé dans le monde."
+          }
+        }
+      }
+    },
+    "release_0_2_items.2": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Touche un badge pour ouvrir sa page : combien de joueurs à chaque palier, qui l’a eu en premier, ou la plaque d’un badge unique."
+          }
+        }
+      }
+    },
+    "release_0_2_items.3": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Des sets à compléter (Horloge pourrie, Quatre saisons, Altitude) : un set complet débloque un badge surprise."
+          }
+        }
+      }
+    },
+    "release_0_2_items.4": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nouveaux badges : Sommet, Alpage et Abysses selon l’altitude de tes poses, et Oiseau à succès, Oiseau culte et Indestructible quand tes oiseaux font carrière."
+          }
+        }
+      }
+    },
+    "release_0_2_items.5": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chaque badge donne un titre : choisis celui qui s’affiche sous ton nom, dans le classement et sur tes oiseaux."
+          }
+        }
+      }
+    },
+    "release_0_2_items.6": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vitrine : épingle tes 3 badges préférés en haut de ton profil."
+          }
+        }
+      }
+    },
+    "release_0_2_items.7": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pourrisseur du mois et Chasseur du mois : à la fin de chaque mois, le premier du classement remporte le badge. Le classement s’ouvre sur le mois en cours, avec le premier couronné et les jours restants ; la période « semaine » disparaît."
+          }
+        }
+      }
+    },
+    "release_0_2_items.8": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’app demande au démarrage l’autorisation de t’envoyer des notifications, pour ne rater aucune trouvaille de tes oiseaux."
+          }
+        }
+      }
+    },
+    "release_0_2_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Badges : titres, sets et Pourrisseur du mois"
+          }
+        }
+      }
+    },
+    "release_0_3_items.0": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L’oiseau pourri se recentre sur ce qui compte : poser des oiseaux, les chercher, les trouver."
+          }
+        }
+      }
+    },
+    "release_0_3_items.1": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Les badges, les titres, la vitrine et le parrainage disparaissent. Ton profil montre combien d’oiseaux tu as posés et trouvés, et les oiseaux que tu as posés."
+          }
+        }
+      }
+    },
+    "release_0_3_items.2": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sur un profil, les oiseaux en couleur sont ceux que tu as trouvés. Touche-en un pour le voir en grand, puis « Voir sur la carte »."
+          }
+        }
+      }
+    },
+    "release_0_3_items.3": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Une photo est désormais demandée pour poser un oiseau."
+          }
+        }
+      }
+    },
+    "release_0_3_items.4": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nouvelle allure : noir, blanc, jaune fluo et rose, une nouvelle typo, des boutons en relief comme des stickers et des icônes d’app en rose ou en jaune. Un seul thème, clair."
+          }
+        }
+      }
+    },
+    "release_0_3_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Retour à l’essentiel"
+          }
+        }
+      }
+    },
+    "release_notes_ok": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Super !"
+          }
+        }
+      }
+    },
+    "release_notes_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quoi de neuf"
+          }
+        }
+      }
+    },
+    "release_version": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Version %1$@ · %2$@"
+          }
+        }
+      }
+    },
+    "report_error_already": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vous avez déjà signalé cet oiseau pourri."
+          }
+        }
+      }
+    },
+    "report_error_archived": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cet oiseau pourri a déjà été retiré."
+          }
+        }
+      }
+    },
+    "report_error_network": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pas de connexion : le signalement n'a pas pu être envoyé."
+          }
+        }
+      }
+    },
+    "report_error_own": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vous ne pouvez pas signaler votre propre oiseau pourri."
+          }
+        }
+      }
+    },
+    "report_error_too_far": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vous n'êtes pas assez proche de l'oiseau pourri pour le signaler."
+          }
+        }
+      }
+    },
+    "report_queued_body": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pas de connexion : ton signalement part dès que le réseau revient."
+          }
+        }
+      }
+    },
+    "report_queued_body_server": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le serveur ne répond pas : ton signalement part dès qu’il revient."
+          }
+        }
+      }
+    },
+    "reset_done": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ton mot de passe a été mis à jour. Tu peux te reconnecter."
+          }
+        }
+      }
+    },
+    "reset_failed": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Échec de la réinitialisation"
+          }
+        }
+      }
+    },
+    "reset_invalid": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lien invalide ou expiré. Redemande un lien de réinitialisation."
+          }
+        }
+      }
+    },
+    "reset_submit": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Réinitialiser"
+          }
+        }
+      }
+    },
+    "reset_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nouveau mot de passe"
+          }
+        }
+      }
+    },
+    "reset_to_login": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aller à la connexion"
+          }
+        }
+      }
+    },
+    "settings_account": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compte et sécurité"
+          }
+        }
+      }
+    },
+    "settings_account_hint": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profil, mot de passe, suppression du compte"
+          }
+        }
+      }
+    },
+    "settings_admin": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Admin"
+          }
+        }
+      }
+    },
+    "settings_admin_hint": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Documentation API"
+          }
+        }
+      }
+    },
+    "settings_icon": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Icône de l'app"
+          }
+        }
+      }
+    },
+    "settings_icon_classique": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Classique"
+          }
+        }
+      }
+    },
+    "settings_icon_coucou": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Coucou"
+          }
+        }
+      }
+    },
+    "settings_icon_detective": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Détective"
+          }
+        }
+      }
+    },
+    "settings_icon_fete": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fête"
+          }
+        }
+      }
+    },
+    "settings_icon_note": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elle remplacera l'icône de ton écran d'accueil dès que tu quitteras l'app (le launcher peut prendre quelques secondes)."
+          }
+        }
+      }
+    },
+    "settings_kofi": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Soutenir sur Ko-fi"
+          }
+        }
+      }
+    },
+    "settings_kofi_hint": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Offre un café aux créateurs de l'oiseau"
+          }
+        }
+      }
+    },
+    "settings_order": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Commander des oiseaux"
+          }
+        }
+      }
+    },
+    "settings_order_hint": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reçois de nouveaux oiseaux pourris à poser"
+          }
+        }
+      }
+    },
+    "settings_preferences": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Préférences"
+          }
+        }
+      }
+    },
+    "settings_preferences_hint": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Affichage, carte et icône"
+          }
+        }
+      }
+    },
+    "settings_release_notes": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notes de version"
+          }
+        }
+      }
+    },
+    "settings_showcase": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Charte graphique (debug)"
+          }
+        }
+      }
+    },
+    "settings_sign_out": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se déconnecter"
+          }
+        }
+      }
+    },
+    "settings_sign_out_body": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu devras ressaisir ton e-mail et ton mot de passe pour revenir. Tes oiseaux et ta collection ne bougent pas."
+          }
+        }
+      }
+    },
+    "settings_sign_out_pending": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%ld élément en attente d’envoi reste sur cet appareil et partira à ta prochaine connexion."
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%ld éléments en attente d’envoi restent sur cet appareil et partiront à ta prochaine connexion."
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%ld éléments en attente d’envoi restent sur cet appareil et partiront à ta prochaine connexion."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "settings_sign_out_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se déconnecter ?"
+          }
+        }
+      }
+    },
+    "settings_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Réglages"
+          }
+        }
+      }
+    },
+    "settings_version": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Version %1$@ (%2$ld)"
+          }
+        }
+      }
+    },
+    "sheet_archived": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cet oiseau pourri a été retiré"
+          }
+        }
+      }
+    },
+    "sheet_find": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trouver cet oiseau pourri"
+          }
+        }
+      }
+    },
+    "sheet_in_collection": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dans ta collection"
+          }
+        }
+      }
+    },
+    "sheet_in_collection_on": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dans ta collection - trouvé le %1$@"
+          }
+        }
+      }
+    },
+    "sheet_mine": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "C'est ton oiseau pourri"
+          }
+        }
+      }
+    },
+    "sheet_my_placement": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ta pose"
+          }
+        }
+      }
+    },
+    "sheet_no_hint": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucun indice - bonne chance !"
+          }
+        }
+      }
+    },
+    "sheet_placed_by": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Posé par %1$@"
+          }
+        }
+      }
+    },
+    "sheet_private": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sur une propriété privée"
+          }
+        }
+      }
+    },
+    "sheet_reported": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Signalé comme disparu - à vérifier dans ta collection"
+          }
+        }
+      }
+    },
+    "sheet_spoiler": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Indice photo - toucher pour révéler"
+          }
+        }
+      }
+    },
+    "sheet_spoiler_alt": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Photo du poseur"
+          }
+        }
+      }
+    },
+    "sheet_spoiler_caption": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Photo de %1$@"
+          }
+        }
+      }
+    },
+    "sheet_spoiler_reveal": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Révéler la photo du poseur"
+          }
+        }
+      }
+    },
+    "sheet_trophy": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trophée"
+          }
+        }
+      }
+    },
+    "sheet_trophy_caption": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ta trouvaille"
+          }
+        }
+      }
+    },
+    "stale_banner": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dernières données du %1$@"
+          }
+        }
+      }
+    },
+    "sync_banner_failed": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%ld élément à vérifier"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%ld éléments à vérifier"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%ld éléments à vérifier"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "sync_banner_pending": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%ld élément pas encore synchronisé"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%ld éléments pas encore synchronisés"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%ld éléments pas encore synchronisés"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "sync_body": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enregistré sur cet appareil, faute de réseau ou de serveur. Tout part tout seul dès que ça revient — les autres joueurs ne voient encore rien."
+          }
+        }
+      }
+    },
+    "sync_fail_archived": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cet oiseau a été retiré entre-temps."
+          }
+        }
+      }
+    },
+    "sync_fail_edit_window": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trop tard pour modifier le texte (5 minutes après la pose)."
+          }
+        }
+      }
+    },
+    "sync_fail_not_found": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cet oiseau n'existe plus."
+          }
+        }
+      }
+    },
+    "sync_fail_other": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "L'envoi a échoué."
+          }
+        }
+      }
+    },
+    "sync_fail_photo": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La photo est manquante."
+          }
+        }
+      }
+    },
+    "sync_fail_reposition_locked": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quelqu’un l’a trouvé entre-temps : il ne peut plus être déplacé."
+          }
+        }
+      }
+    },
+    "sync_fail_server": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le serveur a refusé plusieurs fois cet envoi."
+          }
+        }
+      }
+    },
+    "sync_fail_too_far": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu étais trop loin de l'oiseau."
+          }
+        }
+      }
+    },
+    "sync_fail_too_far_from_device": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La position choisie était trop loin de ta position réelle."
+          }
+        }
+      }
+    },
+    "sync_ignore": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ignorer"
+          }
+        }
+      }
+    },
+    "sync_ignore_a11y": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ignorer cet élément"
+          }
+        }
+      }
+    },
+    "sync_kind_delete": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suppression"
+          }
+        }
+      }
+    },
+    "sync_kind_edit": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modification"
+          }
+        }
+      }
+    },
+    "sync_kind_find": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trouvaille"
+          }
+        }
+      }
+    },
+    "sync_kind_placement": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oiseau posé"
+          }
+        }
+      }
+    },
+    "sync_kind_prefs": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Préférences"
+          }
+        }
+      }
+    },
+    "sync_kind_report": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Signalement"
+          }
+        }
+      }
+    },
+    "sync_kind_toggle": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Réglage d’un oiseau"
+          }
+        }
+      }
+    },
+    "sync_kind_wishlist": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Liste d’envies"
+          }
+        }
+      }
+    },
+    "sync_retry": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Réessayer maintenant"
+          }
+        }
+      }
+    },
+    "sync_retry_busy": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Envoi…"
+          }
+        }
+      }
+    },
+    "sync_row_meta": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ · %2$@"
+          }
+        }
+      }
+    },
+    "sync_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pas encore synchronisé"
+          }
+        }
+      }
+    },
+    "tab_collection": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Collection"
+          }
+        }
+      }
+    },
+    "tab_leaderboard": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Classement"
+          }
+        }
+      }
+    },
+    "tab_map": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Carte"
+          }
+        }
+      }
+    },
+    "tab_place": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Poser"
+          }
+        }
+      }
+    },
+    "tab_profile": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Profil"
+          }
+        }
+      }
+    },
+    "terms_accept": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "J'accepte"
+          }
+        }
+      }
+    },
+    "terms_body": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oiseau pourri a maintenant des %1$@ et une %2$@ : qui voit tes photos, ce qu'on fait de tes données (rien d'autre que le jeu), et ce qui relève de ta responsabilité quand tu colles. Prends une minute pour les lire."
+          }
+        }
+      }
+    },
+    "terms_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avant de continuer"
+          }
+        }
+      }
+    },
+    "welcome_find_body": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Il est sous ton nez ? Une photo et il rejoint ta collection."
+          }
+        }
+      }
+    },
+    "welcome_find_kicker": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trouve"
+          }
+        }
+      }
+    },
+    "welcome_find_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Attrapé !"
+          }
+        }
+      }
+    },
+    "welcome_hello_body": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le jeu de piste, façon géocaching. Des oiseaux pourris se planquent tout autour de toi… sauras-tu tous les dénicher ?"
+          }
+        }
+      }
+    },
+    "welcome_hello_kicker": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bienvenue !"
+          }
+        }
+      }
+    },
+    "welcome_hunt_kicker": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "C'est parti"
+          }
+        }
+      }
+    },
+    "welcome_hunt_submit": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Je me lance !"
+          }
+        }
+      }
+    },
+    "welcome_hunt_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prêt pour la chasse ?"
+          }
+        }
+      }
+    },
+    "welcome_page": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Étape %1$ld sur %2$ld"
+          }
+        }
+      }
+    },
+    "welcome_place_body": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Colle ton sticker dans un coin malin, laisse un indice bien tordu."
+          }
+        }
+      }
+    },
+    "welcome_place_kicker": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pose"
+          }
+        }
+      }
+    },
+    "welcome_place_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "À ton tour de planquer"
+          }
+        }
+      }
+    },
+    "welcome_ready": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Je suis prêt"
+          }
+        }
+      }
+    },
+    "welcome_search_body": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La carte grouille d'oiseaux planqués par les autres. Lis l'indice, suis ton flair et file sur place."
+          }
+        }
+      }
+    },
+    "welcome_search_kicker": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cherche"
+          }
+        }
+      }
+    },
+    "welcome_search_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ouvre l'œil"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

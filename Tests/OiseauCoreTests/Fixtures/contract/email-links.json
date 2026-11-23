@@ -1,0 +1,5 @@
+{
+  "resetPassword": "http://localhost:5173/reset-password?token=token",
+  "verifyEmail": "http://localhost:3000/auth/verify-email?token=token&callbackURL=http%3A%2F%2Flocalhost%3A5173%2Fsettings%2Fcompte%3Femail%3Dverified",
+  "approveEmailChange": "http://localhost:3000/auth/verify-email?token=token&callbackURL=http%3A%2F%2Flocalhost%3A5173%2Fsettings%2Fcompte%3Femail%3Dapproved"
+}

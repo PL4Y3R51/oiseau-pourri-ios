@@ -1,0 +1,156 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+# A newer push makes the running build pointless: the loop is push → look → fix.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  models:
+    name: Generated models are up to date
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - run: node tools/gen-models.mjs --check
+
+  core:
+    name: OiseauCore (Linux)
+    runs-on: ubuntu-latest
+    container: swift:latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: swift test
+        run: swift test 2>&1 | tee core.log
+        shell: bash -o pipefail {0}
+      - name: Errors in the summary
+        if: failure()
+        shell: bash
+        run: |
+          echo '### OiseauCore errors' >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          grep -E 'error:|✘|failed' core.log | head -60 >> "$GITHUB_STEP_SUMMARY" || true
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
+  ios:
+    name: iOS app (simulator)
+    runs-on: macos-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Tools
+        run: |
+          xcodebuild -version
+          brew list xcodegen > /dev/null 2>&1 || brew install xcodegen
+          brew list xcbeautify > /dev/null 2>&1 || brew install xcbeautify
+
+      - name: Generate the Xcode project
+        run: xcodegen generate
+
+      - name: Pick a simulator
+        id: sim
+        run: |
+          # The newest iPhone this Xcode ships, by name, so the job survives image updates.
+          NAME=$(xcrun simctl list devices available -j | python3 -c '
+          import json, sys
+          devices = [d for rt, ds in json.load(sys.stdin)["devices"].items() if "iOS" in rt for d in ds]
+          phones = [d["name"] for d in devices if d["name"].startswith("iPhone") and "Pro" not in d["name"] and "Plus" not in d["name"] and "SE" not in d["name"]]
+          print(sorted(phones)[-1] if phones else devices[0]["name"])
+          ')
+          echo "Simulator: $NAME"
+          echo "destination=platform=iOS Simulator,name=$NAME" >> "$GITHUB_OUTPUT"
+
+      - name: Build
+        run: |
+          set -o pipefail
+          xcodebuild build-for-testing \
+            -project OiseauPourri.xcodeproj -scheme OiseauPourri \
+            -destination "${{ steps.sim.outputs.destination }}" \
+            -derivedDataPath build \
+            CODE_SIGN_IDENTITY=- CODE_SIGNING_REQUIRED=NO \
+            2>&1 | tee build.log | xcbeautify --renderer github-actions
+
+      - name: Test (unit, screenshots, UI smoke)
+        run: |
+          set -o pipefail
+          xcodebuild test-without-building \
+            -project OiseauPourri.xcodeproj -scheme OiseauPourri \
+            -destination "${{ steps.sim.outputs.destination }}" \
+            -derivedDataPath build \
+            -resultBundlePath artifacts/Tests.xcresult \
+            2>&1 | tee test.log | xcbeautify --renderer github-actions
+
+      # For a real iPhone without a paid developer account: a Release build (the
+      # production API), unsigned, packaged as an .ipa that a sideloading tool signs
+      # with a free Apple ID (README: « Sur un vrai iPhone »).
+      - name: Unsigned iPhone build (.ipa)
+        run: |
+          set -o pipefail
+          xcodebuild build \
+            -project OiseauPourri.xcodeproj -scheme OiseauPourri \
+            -configuration Release \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath build-device \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" \
+            2>&1 | tee device.log | xcbeautify --renderer github-actions
+          APP=$(find build-device/Build/Products/Release-iphoneos -maxdepth 1 -name '*.app' | head -1)
+          test -n "$APP"
+          mkdir -p ipa/Payload artifacts
+          cp -R "$APP" ipa/Payload/
+          (cd ipa && zip -qry ../artifacts/OiseauPourri-unsigned.ipa Payload)
+          ls -lh artifacts/OiseauPourri-unsigned.ipa
+
+      - name: Upload the .ipa
+        uses: actions/upload-artifact@v4
+        with:
+          name: ipa-${{ github.run_number }}
+          path: artifacts/OiseauPourri-unsigned.ipa
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Screenshots out of the result bundle
+        if: always()
+        run: |
+          [ -d artifacts/Tests.xcresult ] || exit 0
+          xcrun xcresulttool export attachments --path artifacts/Tests.xcresult --output-path artifacts/attachments
+          # Name each PNG after its attachment (the test's own name), drop the UUID suffix.
+          python3 - <<'EOF'
+          import json, os, re, shutil
+          src, dst = "artifacts/attachments", "artifacts/screenshots"
+          os.makedirs(dst, exist_ok=True)
+          for test in json.load(open(f"{src}/manifest.json")):
+              for a in test["attachments"]:
+                  if a["exportedFileName"].endswith(".png"):
+                      name = re.sub(r"_\d+_[0-9A-F-]{36}", "", a.get("suggestedHumanReadableName") or a["exportedFileName"])
+                      shutil.copy(f"{src}/{a['exportedFileName']}", f"{dst}/{name}")
+          print("\n".join(sorted(os.listdir(dst))))
+          EOF
+
+      - name: Errors in the summary
+        if: failure()
+        run: |
+          {
+            echo '### iOS build / test errors'
+            echo '```'
+            cat build.log test.log device.log 2>/dev/null | grep -E 'error:|warning: .*(deprecated|unused)|failed|XCTAssert' | grep -v '^ld: warning' | sort -u | head -80
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload screenshots and logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios-${{ github.run_number }}
+          path: |
+            artifacts/screenshots
+            build.log
+            test.log
+          if-no-files-found: warn
+          retention-days: 14
