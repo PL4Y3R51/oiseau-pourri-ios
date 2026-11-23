@@ -1,0 +1,103 @@
+# XcodeGen spec: `xcodegen generate` writes OiseauPourri.xcodeproj (never committed).
+name: OiseauPourri
+options:
+  bundleIdPrefix: ch.oiseaupourri
+  deploymentTarget:
+    iOS: "17.0"
+  developmentLanguage: fr
+  createIntermediateGroups: true
+
+settings:
+  base:
+    MARKETING_VERSION: "0.1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    TARGETED_DEVICE_FAMILY: "1"
+    # The app is in Swift 5 mode while it is written without a compiler at hand;
+    # OiseauCore (Package.swift) is in Swift 6 mode, checked on every OS.
+    SWIFT_VERSION: "5.0"
+
+packages:
+  OiseauCore:
+    path: .
+  MapLibre:
+    url: https://github.com/maplibre/maplibre-gl-native-distribution
+    from: "6.0.0"
+
+targets:
+  OiseauPourri:
+    type: application
+    platform: iOS
+    sources:
+      - path: App/Sources
+      - path: App/Resources
+    dependencies:
+      - package: OiseauCore
+      - package: MapLibre
+    info:
+      path: App/Info.plist
+      properties:
+        CFBundleDisplayName: Oiseau pourri
+        CFBundleDevelopmentRegion: fr
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        UILaunchScreen:
+          UIColorName: LaunchBackground
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+        UIAppFonts: [Syne.ttf]
+        NSLocationWhenInUseUsageDescription: "Ta position place la carte autour de toi et permet de trouver les oiseaux sur place."
+        # Debug talks to the dev API on http://localhost.
+        NSAppTransportSecurity:
+          NSAllowsLocalNetworking: true
+        ITSAppUsesNonExemptEncryption: false
+        OPApiBaseURL: $(API_BASE_URL)
+        OPWebBaseURL: $(WEB_BASE_URL)
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: ch.oiseaupourri.app
+        PRODUCT_NAME: OiseauPourri
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        CODE_SIGN_STYLE: Automatic
+      configs:
+        Debug:
+          PRODUCT_BUNDLE_IDENTIFIER: ch.oiseaupourri.app.dev
+          API_BASE_URL: http://localhost:3000
+          WEB_BASE_URL: http://localhost:5173
+        Release:
+          API_BASE_URL: https://oiseaupourri.ch
+          WEB_BASE_URL: https://oiseaupourri.ch
+
+  OiseauPourriTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [AppTests]
+    dependencies:
+      - target: OiseauPourri
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+
+  OiseauPourriUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: [AppUITests]
+    dependencies:
+      - target: OiseauPourri
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_TARGET_NAME: OiseauPourri
+
+schemes:
+  OiseauPourri:
+    build:
+      targets:
+        OiseauPourri: all
+        OiseauPourriTests: [test]
+        OiseauPourriUITests: [test]
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - OiseauPourriTests
+        - OiseauPourriUITests

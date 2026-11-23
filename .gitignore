@@ -10,3 +10,5 @@ artifacts/
 .DS_Store
 # SwiftPM on Windows writes the test resource bundle plist here
 /Info.plist
+# XcodeGen writes it from project.yml
+App/Info.plist

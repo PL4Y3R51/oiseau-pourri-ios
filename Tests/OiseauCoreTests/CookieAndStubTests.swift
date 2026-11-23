@@ -72,9 +72,10 @@ struct StubServerTests {
         let cache = MemoryUserCache()
         let (auth, _) = app(StubServer(latency: 0), cache: cache, store: store)
         try await auth.signIn(email: StubServer.email, password: StubServer.password)
+        let player = try #require(cache.user)
 
         let (relaunched, _) = app(StubServer(mode: .serverDown, latency: 0), cache: cache, store: store)
         await relaunched.restore()
-        #expect(relaunched.state == .signedIn(cache.user!, offline: true))
+        #expect(relaunched.state == .signedIn(player, offline: true))
     }
 }
