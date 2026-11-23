@@ -182,6 +182,12 @@ public struct CollectionSection<T> {
     public var key: String
     public var label: String
     public var items: [T]
+
+    public init(key: String, label: String, items: [T]) {
+        self.key = key
+        self.label = label
+        self.items = items
+    }
 }
 
 extension CollectionSection: Equatable where T: Equatable {}

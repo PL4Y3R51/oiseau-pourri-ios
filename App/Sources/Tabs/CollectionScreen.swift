@@ -592,7 +592,7 @@ private struct ReportRow: View {
                 }
             }
             if let note = report.note { Text(note).font(.zBody) }
-            if let photo = report.photoId { Figure(photoId: photo, caption: L("detail_report_proof", report.reportedByName)) }
+            Figure(photoId: report.photoId, caption: L("detail_report_proof", report.reportedByName))
             HStack(spacing: 10) {
                 OpButton(title: L("detail_report_confirm"), icon: "check", variant: .secondary, fullWidth: true) {
                     Task { await model.decide(report, accepted: true, app) }
@@ -623,10 +623,8 @@ private struct FinderRow: View {
                 Avatar(image: finder.image, size: 32)
                 Text(L("detail_finder_caption", finder.displayName, shortDate(finder.foundAt))).font(.zBody).foregroundStyle(Zine.ink)
                 Spacer()
-                if let id = finder.findPhotoId {
-                    AsyncPhoto(photoId: id, thumb: true).frame(width: 44, height: 44).clipShape(RoundedRectangle(cornerRadius: 6))
-                        .accessibilityLabel(L("detail_finder_trophy_a11y", finder.displayName))
-                }
+                AsyncPhoto(photoId: finder.findPhotoId, thumb: true).frame(width: 44, height: 44).clipShape(RoundedRectangle(cornerRadius: 6))
+                    .accessibilityLabel(L("detail_finder_trophy_a11y", finder.displayName))
             }
         }
         .buttonStyle(.plain)

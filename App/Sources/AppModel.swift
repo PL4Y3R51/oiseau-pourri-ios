@@ -81,15 +81,18 @@ final class AppModel {
     @ObservationIgnored private var monitor: NWPathMonitor?
 
     init(api: ApiClient, userCache: UserCache, dataDir: URL?, cacheDir: URL?) {
-        self.api = api
-        auth = AuthRepository(api: api, userCache: userCache)
-        reachability = Reachability(networkUp: true)
+        let auth = AuthRepository(api: api, userCache: userCache)
+        let reachability = Reachability(networkUp: true)
         let queueDir = dataDir?.appendingPathComponent("queue") ?? FileManager.default.temporaryDirectory.appendingPathComponent("queue-\(UUID().uuidString)")
-        queue = OfflineQueue(dir: queueDir)
-        cache = JsonCache(root: cacheDir, userId: { [weak auth] in auth?.state.user?.id })
+        let queue = OfflineQueue(dir: queueDir)
+        let userId: () -> String? = { [weak auth] in auth?.state.user?.id }
+        self.api = api
+        self.auth = auth
+        self.reachability = reachability
+        self.queue = queue
+        cache = JsonCache(root: cacheDir, userId: userId)
         photoPreparer = ImagePhotoPreparer()
 
-        let userId: () -> String? = { [weak auth] in auth?.state.user?.id }
         outbox = Outbox(
             queue: queue,
             userId: userId,
