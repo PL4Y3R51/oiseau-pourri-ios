@@ -237,7 +237,7 @@ struct CollectionScreen: View {
     private var columns: [GridItem] { [GridItem(.adaptive(minimum: 128), spacing: 10)] }
 
     private func countryLabel(_ code: String?) -> String {
-        countryName(code, locale: Locale.current) ?? L("collection_unknown_country")
+        countryName(code, locale: appLocale) ?? L("collection_unknown_country")
     }
 
     @ViewBuilder private var foundGrid: some View {
@@ -295,7 +295,7 @@ struct CollectionScreen: View {
         case .country:
             return groupSections(items, key: { $0[keyPath: code] ?? unknownCountry }, label: { countryLabel($0[keyPath: code]) })
         case .month:
-            return groupSections(items, key: { String($0[keyPath: date].prefix(7)) }, label: { monthLabel($0[keyPath: date], locale: Locale.current) })
+            return groupSections(items, key: { String($0[keyPath: date].prefix(7)) }, label: { monthLabel($0[keyPath: date], locale: appLocale) })
         }
     }
 

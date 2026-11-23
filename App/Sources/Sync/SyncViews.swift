@@ -125,7 +125,7 @@ private struct QueueRow: View {
             .clipShape(RoundedRectangle(cornerRadius: 8))
             VStack(alignment: .leading, spacing: 3) {
                 Text(a.placeName.isEmpty ? L(kindKey(a.kind)) : a.placeName).font(.syne(14, 700)).foregroundStyle(Zine.ink)
-                Text(L("sync_row_meta", L(kindKey(a.kind)), Date(timeIntervalSince1970: TimeInterval(a.capturedAt) / 1000).formatted(date: .abbreviated, time: .shortened)))
+                Text(L("sync_row_meta", L(kindKey(a.kind)), Date(timeIntervalSince1970: TimeInterval(a.capturedAt) / 1000).formatted(Date.FormatStyle(date: .abbreviated, time: .shortened).locale(appLocale))))
                     .font(.zBodySmall).foregroundStyle(Zine.muted)
                 if a.status == .failed {
                     Text(a.failureReason().text).font(.zBodySmall).foregroundStyle(Zine.error)

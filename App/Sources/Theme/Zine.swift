@@ -119,12 +119,16 @@ extension View {
 
 // MARK: - Strings
 
+/// The language the app's texts are in (French until a translation exists): dates and
+/// numbers follow it, not the phone's region, like Android's contentLocale().
+let appLocale = Locale(identifier: (Bundle.main.preferredLocalizations.first ?? "fr") == "fr" ? "fr_CH" : Bundle.main.preferredLocalizations.first!)
+
 /// A string of Localizable.xcstrings (the Android string names), formatted.
 func L(_ key: String, _ args: CVarArg...) -> String { L(key, args: args) }
 
 func L(_ key: String, args: [CVarArg]) -> String {
     let format = Bundle.main.localizedString(forKey: key, value: key, table: nil)
-    return args.isEmpty ? format : String(format: format, locale: Locale.current, arguments: args)
+    return args.isEmpty ? format : String(format: format, locale: appLocale, arguments: args)
 }
 
 extension UiText {

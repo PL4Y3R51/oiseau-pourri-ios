@@ -180,7 +180,7 @@ struct OfflineMapsScreen: View {
                         Text(L("offline_maps_zone_meta",
                                formatBytes(z.bytes),
                                L(z.meta.detail == .quartier ? "offline_maps_detail_quartier" : "offline_maps_detail_ville"),
-                               dateOf(epochMs: z.meta.createdAt).formatted(date: .abbreviated, time: .omitted)))
+                               dateOf(epochMs: z.meta.createdAt).formatted(Date.FormatStyle(date: .abbreviated, time: .omitted).locale(appLocale))))
                             .font(.zBodySmall).foregroundStyle(Zine.muted)
                         if let p = model.progress[z.id], p < 1 {
                             ProgressView(value: p).tint(Zine.ink)

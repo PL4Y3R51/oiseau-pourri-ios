@@ -129,7 +129,6 @@ struct StickerSheetContent: View {
         .padding(.leading, 18)
         .padding(.trailing, 10)
         .padding(.bottom, 20)
-        .accessibilityIdentifier("sheet")
     }
 
     private func foundLine(_ s: MapSticker) -> String {
@@ -156,7 +155,7 @@ func longDate(_ iso: String) -> String? {
     let parser = ISO8601DateFormatter()
     parser.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
     guard let date = parser.date(from: iso) ?? ISO8601DateFormatter().date(from: iso) else { return nil }
-    return date.formatted(date: .long, time: .omitted)
+    return date.formatted(Date.FormatStyle(date: .long, time: .omitted).locale(appLocale))
 }
 
 /// Round badge in the kind's colour.

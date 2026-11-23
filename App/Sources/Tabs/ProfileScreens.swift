@@ -343,7 +343,7 @@ func shortDate(_ iso: String) -> String {
     let parser = ISO8601DateFormatter()
     parser.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
     guard let date = parser.date(from: iso) ?? ISO8601DateFormatter().date(from: iso) else { return "" }
-    return date.formatted(date: .numeric, time: .omitted)
+    return date.formatted(Date.FormatStyle(date: .numeric, time: .omitted).locale(appLocale))
 }
 
 extension MapSticker: Identifiable {}

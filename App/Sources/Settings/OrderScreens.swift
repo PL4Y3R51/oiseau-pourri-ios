@@ -217,7 +217,7 @@ struct OrderSummary: View {
         let parser = ISO8601DateFormatter()
         parser.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
         guard let d = parser.date(from: iso) ?? ISO8601DateFormatter().date(from: iso) else { return "" }
-        return d.formatted(.dateTime.day().month(.wide))
+        return d.formatted(Date.FormatStyle().day().month(.wide).locale(appLocale))
     }
 }
 

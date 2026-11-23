@@ -21,7 +21,7 @@ final class ScreenshotTests: XCTestCase {
         return model
     }
 
-    private func snap<V: View>(_ name: String, model: AppModel, size: CGSize? = nil, wait: TimeInterval = 1.0, _ view: V) throws {
+    private func snap<V: View>(_ name: String, model: AppModel, size: CGSize? = nil, wait: TimeInterval = 2.5, _ view: V) throws {
         let frame = CGRect(origin: .zero, size: size ?? phone)
         let scene = UIApplication.shared.connectedScenes.compactMap { $0 as? UIWindowScene }.first
         let window = scene.map { UIWindow(windowScene: $0) } ?? UIWindow(frame: frame)

@@ -212,7 +212,7 @@ struct StaleBanner: View {
     var body: some View {
         HStack(spacing: 8) {
             LucideIcon("cloud_off", size: 16)
-            Text(L("stale_banner", since.formatted(date: .numeric, time: .shortened))).font(.zBodySmall)
+            Text(L("stale_banner", since.formatted(Date.FormatStyle(date: .numeric, time: .shortened).locale(appLocale)))).font(.zBodySmall)
         }
         .foregroundStyle(Zine.ink)
         .padding(10)
