@@ -21,7 +21,8 @@ final class ScreenshotTests: XCTestCase {
         return model
     }
 
-    private func snap<V: View>(_ name: String, model: AppModel, size: CGSize? = nil, wait: TimeInterval = 2.5, _ view: V) throws {
+    /// Async: the screens load over the main actor, which a spun run loop would keep busy.
+    private func snap<V: View>(_ name: String, model: AppModel, size: CGSize? = nil, wait: TimeInterval = 2.0, _ view: V) async throws {
         let frame = CGRect(origin: .zero, size: size ?? phone)
         let scene = UIApplication.shared.connectedScenes.compactMap { $0 as? UIWindowScene }.first
         let window = scene.map { UIWindow(windowScene: $0) } ?? UIWindow(frame: frame)
@@ -32,7 +33,7 @@ final class ScreenshotTests: XCTestCase {
         window.isHidden = false
         host.view.frame = frame
         host.view.layoutIfNeeded()
-        RunLoop.main.run(until: Date().addingTimeInterval(wait))
+        try await Task.sleep(nanoseconds: UInt64(wait * 1_000_000_000))
         let image = UIGraphicsImageRenderer(bounds: frame).image { _ in
             window.drawHierarchy(in: frame, afterScreenUpdates: true)
         }
@@ -45,32 +46,32 @@ final class ScreenshotTests: XCTestCase {
 
     func testTabs() async throws {
         let model = try await signedInModel()
-        try snap("tab-collection", model: model, NavigationStack { CollectionScreen() })
-        try snap("tab-leaderboard", model: model, NavigationStack { LeaderboardScreen() })
-        try snap("tab-profile", model: model, NavigationStack { MyProfileScreen() })
-        try snap("tab-place-charter", model: model, NavigationStack { PlaceScreen() })
-        try snap("profile-public", model: model, NavigationStack { PublicProfileScreen(userId: "u-alice") })
+        try await snap("tab-collection", model: model, NavigationStack { CollectionScreen() })
+        try await snap("tab-leaderboard", model: model, NavigationStack { LeaderboardScreen() })
+        try await snap("tab-profile", model: model, NavigationStack { MyProfileScreen() })
+        try await snap("tab-place-charter", model: model, NavigationStack { PlaceScreen() })
+        try await snap("profile-public", model: model, NavigationStack { PublicProfileScreen(userId: "u-alice") })
     }
 
     func testSettingsPages() async throws {
         let model = try await signedInModel()
-        try snap("settings", model: model, NavigationStack { SettingsScreen() })
-        try snap("settings-preferences", model: model, NavigationStack { PreferencesScreen() })
-        try snap("settings-account", model: model, NavigationStack { AccountScreen() })
-        try snap("settings-order", model: model, NavigationStack { OrderScreen() })
-        try snap("settings-order-history", model: model, NavigationStack { OrderHistoryScreen() })
-        try snap("settings-offline-maps", model: model, NavigationStack { OfflineMapsScreen() })
+        try await snap("settings", model: model, NavigationStack { SettingsScreen() })
+        try await snap("settings-preferences", model: model, NavigationStack { PreferencesScreen() })
+        try await snap("settings-account", model: model, NavigationStack { AccountScreen() })
+        try await snap("settings-order", model: model, NavigationStack { OrderScreen() })
+        try await snap("settings-order-history", model: model, NavigationStack { OrderHistoryScreen() })
+        try await snap("settings-offline-maps", model: model, NavigationStack { OfflineMapsScreen() })
     }
 
     func testFlows() async throws {
         let model = try await signedInModel()
-        try snap("hunt-find", model: model, HuntSheet(model: HuntModel(kind: .find, sticker: SampleStickers.available, position: Position(GeoPoint.lausanne, accuracyM: 8))) {})
-        try snap("hunt-report", model: model, HuntSheet(model: HuntModel(kind: .report, sticker: SampleStickers.found, position: nil)) {})
-        try snap("edit-sticker", model: model, EditStickerView(target: EditTarget(map: SampleStickers.mine, now: parseIsoDate(SampleStickers.placedAt)!.addingTimeInterval(60))))
-        try snap("place-queued", model: model, PlaceQueued(serverDown: true) {})
-        try snap("terms-gate", model: model, TermsGate {})
-        try snap("reset-password", model: model, ResetPasswordView(token: "tok") {})
-        try snap("sheet-with-actions", model: model, size: CGSize(width: 393, height: 620),
+        try await snap("hunt-find", model: model, HuntSheet(model: HuntModel(kind: .find, sticker: SampleStickers.available, position: Position(GeoPoint.lausanne, accuracyM: 8))) {})
+        try await snap("hunt-report", model: model, HuntSheet(model: HuntModel(kind: .report, sticker: SampleStickers.found, position: nil)) {})
+        try await snap("edit-sticker", model: model, EditStickerView(target: EditTarget(map: SampleStickers.mine, now: parseIsoDate(SampleStickers.placedAt)!.addingTimeInterval(60))))
+        try await snap("place-queued", model: model, PlaceQueued(serverDown: true) {})
+        try await snap("terms-gate", model: model, TermsGate {})
+        try await snap("reset-password", model: model, ResetPasswordView(token: "tok") {})
+        try await snap("sheet-with-actions", model: model, size: CGSize(width: 393, height: 620),
                  StickerSheetView(sticker: SampleStickers.available, actions: SheetActions()).background(Zine.panel))
     }
 
@@ -83,12 +84,12 @@ final class ScreenshotTests: XCTestCase {
             Spacer()
         }
         .background(Zine.paper)
-        try snap("reachability", model: model, size: CGSize(width: 393, height: 360), banners)
+        try await snap("reachability", model: model, size: CGSize(width: 393, height: 360), banners)
         // A find parked while offline, listed in the queue.
         _ = model.queue.queueFind(userId: "u-me", stickerId: SampleStickers.available.id, placeName: SampleStickers.available.placeName,
                                   at: Position(GeoPoint.lausanne, accuracyM: 8), photo: Data())
-        try snap("sync-queue", model: model, SyncQueueSheet().background(Zine.panel))
-        try snap("sync-banner", model: model, size: CGSize(width: 393, height: 120), PendingSyncBanner(queue: model.myQueue) {}.padding().background(Zine.paper))
+        try await snap("sync-queue", model: model, SyncQueueSheet().background(Zine.panel))
+        try await snap("sync-banner", model: model, size: CGSize(width: 393, height: 120), PendingSyncBanner(queue: model.myQueue) {}.padding().background(Zine.paper))
     }
 
     func testOrderRules() {

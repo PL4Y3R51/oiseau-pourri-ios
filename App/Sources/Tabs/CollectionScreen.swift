@@ -192,10 +192,7 @@ struct CollectionScreen: View {
                 .accessibilityIdentifier("collection.tab")
 
                 let stats = collectionStats(model.tab, found: model.found, hidden: model.hidden)
-                HStack(spacing: 8) {
-                    StatChip(text: L("collection_stat_finds", stats.finds))
-                    if stats.countries > 0 { StatChip(text: L("collection_stat_countries", stats.countries)) }
-                }
+                if stats.countries > 0 { StatChip(text: L("collection_stat_countries", stats.countries)) }
 
                 if let since = model.staleSince { StaleBanner(since: since) }
                 if let e = model.error { Text(e.text).font(.zBody).foregroundStyle(Zine.error) }
