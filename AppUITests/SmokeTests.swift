@@ -86,7 +86,10 @@ final class SmokeTests: XCTestCase {
 
         app.buttons["Fermer"].firstMatch.tap()
         app.buttons["map.menu"].tap()
-        let confirm = app.sheets.buttons["Se déconnecter"].exists ? app.sheets.buttons["Se déconnecter"] : app.buttons["map.signOut"]
+        // An action sheet or, on iOS 26, an alert: the confirm is the « Se déconnecter » that isn't the menu button.
+        let confirm = app.buttons
+            .matching(NSPredicate(format: "label == %@ AND identifier != %@", "Se déconnecter", "map.menu"))
+            .firstMatch
         XCTAssertTrue(confirm.waitForExistence(timeout: 5))
         shot("07-sign-out")
         confirm.tap()
