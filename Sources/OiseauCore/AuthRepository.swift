@@ -44,6 +44,7 @@ public struct AuthSession: Codable, Hashable, Sendable {
 struct SignInRequest: Encodable { var email: String; var password: String }
 struct SignUpRequest: Encodable { var email: String; var password: String; var name: String }
 struct PasswordResetRequest: Encodable { var email: String; var redirectTo: String }
+struct ResetPasswordRequest: Encodable { var newPassword: String; var token: String }
 
 /// Where the player stands. `unknown` only lasts while the stored session is checked.
 public enum SessionState: Equatable, Sendable {
@@ -150,6 +151,12 @@ public final class AuthRepository {
     public func requestPasswordReset(email: String) async throws(ApiError) {
         let body = PasswordResetRequest(email: email.trimmingCharacters(in: .whitespaces), redirectTo: "/reset-password")
         _ = try await api.post("/auth/request-password-reset", body, as: Ignored.self)
+    }
+
+    /// The new password, with the token of the e-mailed `/reset-password?token=…` link.
+    /// It signs nobody in (web: ResetPasswordPage).
+    public func resetPassword(token: String, newPassword: String) async throws(ApiError) {
+        _ = try await api.post("/auth/reset-password", ResetPasswordRequest(newPassword: newPassword, token: token), as: Ignored.self)
     }
 
     /// Local state is cleared even when the server can't be reached.

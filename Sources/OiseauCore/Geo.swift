@@ -30,6 +30,19 @@ public extension MapSticker {
     var point: GeoPoint { GeoPoint(lng: lng, lat: lat) }
 }
 
+/// A position fix: where, how precise (metres), and when (Android: domain/Geo.kt Position).
+public struct Position: Hashable, Sendable {
+    public var point: GeoPoint
+    public var accuracyM: Double
+    public var at: Date
+
+    public init(_ point: GeoPoint, accuracyM: Double, at: Date = Date(timeIntervalSince1970: 0)) {
+        self.point = point
+        self.accuracyM = accuracyM
+        self.at = at
+    }
+}
+
 private let earthRadiusM = 6_371_000.0
 private func rad(_ d: Double) -> Double { d * .pi / 180 }
 private func deg(_ r: Double) -> Double { r * 180 / .pi }

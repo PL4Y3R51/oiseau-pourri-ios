@@ -61,6 +61,8 @@ struct ContractTests {
     }
 
     @Test func aDeadEmailLinkIsWordedByTheApp() throws {
+        let reset = ApiError.from(status: 400, body: try fixture("reset-password-invalid.json"))
+        #expect(resetErrorMessage(reset) == .of("reset_invalid"))
         let verify = ApiError.from(status: 401, body: try fixture("verify-email-invalid.json"))
         #expect(authErrorMessage(verify, fallback: "account_failed") == .of("auth_error_link"))
     }

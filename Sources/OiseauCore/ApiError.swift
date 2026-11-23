@@ -71,6 +71,11 @@ struct ErrorBody: Decodable {
     var message: String?
 }
 
+/// A used or expired reset link asks for a new one; the rest as in every auth page.
+public func resetErrorMessage(_ e: ApiError) -> UiText {
+    e.code == "INVALID_TOKEN" || e.code == "TOKEN_EXPIRED" ? .of("reset_invalid") : authErrorMessage(e, fallback: "reset_failed")
+}
+
 /// The message for a failed auth call. Better Auth's own messages are English;
 /// the app words the codes a player can hit.
 public func authErrorMessage(_ e: ApiError, fallback: String) -> UiText {

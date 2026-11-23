@@ -268,6 +268,17 @@ struct AuthRepositoryTests {
         #expect(auth.state.user?.id == "u")
     }
 
+    @Test func resetPasswordSendsTheLinksTokenAndSignsNobodyIn() async throws {
+        let server = ScriptedTransport()
+        await server.json(200, #"{"status":true}"#)
+        let auth = AuthRepository(api: client(server), userCache: MemoryUserCache())
+        try await auth.resetPassword(token: "tok", newPassword: "newpassword")
+        let req = await server.takeRequest()
+        #expect(req.url.path == "/auth/reset-password")
+        #expect(text(req.body) == #"{"newPassword":"newpassword","token":"tok"}"#)
+        #expect(auth.state == .unknown)
+    }
+
     @Test func signInTrimsTheEmailAndReadsTheSession() async throws {
         let server = ScriptedTransport()
         await server.json(200, "{}", cookies: [sessionCookie])
