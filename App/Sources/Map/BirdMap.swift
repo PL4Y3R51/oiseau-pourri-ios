@@ -22,6 +22,8 @@ struct BirdMap: UIViewRepresentable {
         view.delegate = context.coordinator
         view.setCenter(CLLocationCoordinate2D(latitude: GeoPoint.lausanne.lat, longitude: GeoPoint.lausanne.lng), zoomLevel: 13, animated: false)
         view.showsUserLocation = showsUser
+        // Edge to edge: the camera centre stays the view's centre, not shifted by the bars.
+        view.automaticallyAdjustsContentInset = false
         view.compassViewPosition = .bottomLeft
         // The attribution « i » next to the MapLibre logo, clear of the floating buttons.
         view.attributionButtonPosition = .bottomLeft
