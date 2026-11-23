@@ -41,7 +41,8 @@ struct MapScreen: View {
                 focus: focus,
                 onTap: { stack in selection = stack.count == 1 ? .one(stack[0].id) : .stack(stack) }
             )
-            .ignoresSafeArea(edges: [.horizontal, .bottom])
+            // Edge to edge, under the status bar, like Android.
+            .ignoresSafeArea()
 
             VStack(spacing: 8) {
                 PendingSyncBanner(queue: app.myQueue) { showQueue = true }

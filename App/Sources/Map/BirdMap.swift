@@ -23,6 +23,9 @@ struct BirdMap: UIViewRepresentable {
         view.setCenter(CLLocationCoordinate2D(latitude: GeoPoint.lausanne.lat, longitude: GeoPoint.lausanne.lng), zoomLevel: 13, animated: false)
         view.showsUserLocation = showsUser
         view.compassViewPosition = .bottomLeft
+        // The attribution « i » next to the MapLibre logo, clear of the floating buttons.
+        view.attributionButtonPosition = .bottomLeft
+        view.attributionButtonMargins = CGPoint(x: 120, y: 8)
         view.accessibilityIdentifier = "map"
 
         // A single tap picks a bird; MapLibre's own double tap (zoom) goes first.
