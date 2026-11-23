@@ -87,6 +87,34 @@ jobs:
             -resultBundlePath artifacts/Tests.xcresult \
             2>&1 | tee test.log | xcbeautify --renderer github-actions
 
+      # For a real iPhone without a paid developer account: a Release build (the
+      # production API), unsigned, packaged as an .ipa that a sideloading tool signs
+      # with a free Apple ID (README: « Sur un vrai iPhone »).
+      - name: Unsigned iPhone build (.ipa)
+        run: |
+          set -o pipefail
+          xcodebuild build \
+            -project OiseauPourri.xcodeproj -scheme OiseauPourri \
+            -configuration Release \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath build-device \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" \
+            2>&1 | tee device.log | xcbeautify --renderer github-actions
+          APP=$(find build-device/Build/Products/Release-iphoneos -maxdepth 1 -name '*.app' | head -1)
+          test -n "$APP"
+          mkdir -p ipa/Payload artifacts
+          cp -R "$APP" ipa/Payload/
+          (cd ipa && zip -qry ../artifacts/OiseauPourri-unsigned.ipa Payload)
+          ls -lh artifacts/OiseauPourri-unsigned.ipa
+
+      - name: Upload the .ipa
+        uses: actions/upload-artifact@v4
+        with:
+          name: ipa-${{ github.run_number }}
+          path: artifacts/OiseauPourri-unsigned.ipa
+          if-no-files-found: error
+          retention-days: 30
+
       - name: Screenshots out of the result bundle
         if: always()
         run: |
