@@ -4,12 +4,26 @@ import OiseauCore
 @main
 struct OiseauPourriApp: App {
     @State private var model = AppModel.live()
+    @Environment(\.scenePhase) private var scenePhase
+
+    init() {
+        BackgroundSync.register()
+    }
 
     var body: some Scene {
         WindowGroup {
             RootView()
                 .environment(model)
+                .environment(model.location)
                 .task { await model.start() }
+                .onOpenURL { model.open($0) }
+                .onContinueUserActivity(NSUserActivityTypeBrowsingWeb) { activity in
+                    if let url = activity.webpageURL { model.open(url) }
+                }
+        }
+        .onChange(of: scenePhase) { _, phase in
+            if phase == .active { Task { await model.resumed() } }
+            if phase == .background { BackgroundSync.schedule() }
         }
     }
 }
@@ -25,7 +39,7 @@ struct RootView: View {
             switch model.session {
             case .unknown: SplashView()
             case .signedOut: SignedOutFlow()
-            case .signedIn: MapScreen()
+            case .signedIn: AuthedShell().firstRunGates()
             }
         }
         .tint(Zine.ink)

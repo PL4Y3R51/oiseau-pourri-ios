@@ -3,79 +3,245 @@ import OiseauCore
 
 /// What the bird sheet shows: one bird, or the birds stacked under a tap.
 enum MapSelection: Identifiable {
-    case one(MapSticker)
+    case one(String)
     case stack([MapSticker])
 
     var id: String {
         switch self {
-        case .one(let s): return s.id
+        case .one(let id): return id
         case .stack(let list): return list.map(\.id).joined(separator: ",")
         }
     }
 }
 
-/// The map tab, read-only in this step: the birds, their sheet, locate me, sign out.
+/// The map tab (Android: ui/map/MapScreen.kt): the birds, their sheet and its actions,
+/// the find and report flows, filters and wishlist, locate me, what waits to sync.
 struct MapScreen: View {
-    @Environment(AppModel.self) private var model
+    @Environment(AppModel.self) private var app
+    @Environment(LocationService.self) private var location
     @State private var selection: MapSelection?
     @State private var locateRequest = 0
-    @State private var confirmSignOut = false
-    @Environment(\.scenePhase) private var scenePhase
+    @State private var focus: GeoPoint?
+    @State private var hunt: HuntModel?
+    @State private var editing: EditTarget?
+    @State private var deleting: MapSticker?
+    @State private var showWishlist = false
+    @State private var showQueue = false
 
     init() {}
 
     var body: some View {
         ZStack(alignment: .top) {
             BirdMap(
-                stickers: model.visibleStickers,
-                styleURL: MapStyle.liberty.url,
+                stickers: app.visibleStickers,
+                styleURL: MapStyle.of(app.prefs?.mapStyle).url,
                 // No permission prompt in CI: the stub has no player to locate.
-                showsUser: !AppConfig.stubApi,
+                showsUser: location.permitted && !AppConfig.stubApi,
                 locateRequest: locateRequest,
-                onTap: { stack in selection = stack.count == 1 ? .one(stack[0]) : .stack(stack) }
+                focus: focus,
+                onTap: { stack in selection = stack.count == 1 ? .one(stack[0].id) : .stack(stack) }
             )
-            .ignoresSafeArea()
+            .ignoresSafeArea(edges: [.horizontal, .bottom])
 
             VStack(spacing: 8) {
-                HStack(alignment: .top) {
-                    if case .signedIn(_, offline: true) = model.session { OfflineChip() }
-                    Spacer()
-                    RoundButton(icon: "settings", label: L("settings_sign_out")) { confirmSignOut = true }
-                        .accessibilityIdentifier("map.menu")
+                PendingSyncBanner(queue: app.myQueue) { showQueue = true }
+                if let error = app.mapError {
+                    MapNotice(text: error.text) { Task { await app.refreshMap(force: true) } }
                 }
-                if let error = model.mapError {
-                    MapNotice(text: error.text) { Task { await model.refreshMap(force: true) } }
+                if let toast = app.toast {
+                    MapNotice(text: toast.text) { app.toast = nil }
+                        .task(id: toast.text) {
+                            try? await Task.sleep(nanoseconds: 4_000_000_000)
+                            app.toast = nil
+                        }
                 }
             }
             .padding(.horizontal, 16)
             .padding(.top, 8)
         }
         .overlay(alignment: .bottomTrailing) {
-            if !AppConfig.stubApi {
-                RoundButton(icon: "locate_fixed", label: L("map_locate_me")) { locateRequest += 1 }
-                    .padding(20)
+            VStack(spacing: 12) {
+                MapMenu(onWishlist: { showWishlist = true })
+                RoundButton(icon: "locate_fixed", label: L("map_locate_me")) {
+                    if location.permitted { locateRequest += 1 } else { location.requestPermission() }
+                }
             }
+            .padding(20)
         }
-        .sheet(item: $selection) { selection in
+        .sheet(item: $selection) { sel in
             Group {
-                switch selection {
-                case .one(let s): StickerSheetView(sticker: s) { self.selection = nil }
-                case .stack(let list): StickerGallery(stickers: list) { self.selection = .one($0) }
+                switch sel {
+                case .one(let id):
+                    if let s = app.stickers?.first(where: { $0.id == id }) { sheet(for: s) }
+                case .stack(let list):
+                    StickerGallery(stickers: list) { selection = .one($0.id) }
                 }
             }
             .presentationDetents([.medium, .large])
             .presentationDragIndicator(.visible)
             .presentationBackground(Zine.panel)
         }
-        .confirmationDialog(L("settings_sign_out_title"), isPresented: $confirmSignOut, titleVisibility: .visible) {
-            Button(L("settings_sign_out"), role: .destructive) { Task { await model.signOut() } }
-                .accessibilityIdentifier("map.signOut")
-        } message: {
-            Text(L("settings_sign_out_body"))
+        .sheet(item: $hunt) { model in
+            HuntSheet(model: model) { hunt = nil }
+                .presentationDetents([.large])
+                .presentationBackground(Zine.panel)
+                .interactiveDismissDisabled(model.busy)
         }
-        .task { await model.refreshMap() }
-        .onChange(of: scenePhase) { _, phase in
-            if phase == .active { Task { await model.refreshMap() } }
+        .sheet(item: $editing) { target in EditStickerView(target: target) }
+        .sheet(isPresented: $showWishlist) {
+            WishlistSheet { s in
+                showWishlist = false
+                fly(to: s)
+            }
+            .presentationDetents([.medium, .large])
+            .presentationBackground(Zine.panel)
+        }
+        .sheet(isPresented: $showQueue) {
+            SyncQueueSheet().presentationDetents([.medium, .large]).presentationBackground(Zine.panel)
+        }
+        .confirmationDialog(L("delete_title"), isPresented: Binding(get: { deleting != nil }, set: { if !$0 { deleting = nil } }), titleVisibility: .visible) {
+            Button(L("common_delete"), role: .destructive) {
+                if let s = deleting { Task { await act { try await app.map.delete(s.id) } } }
+                selection = nil
+            }
+            Button(L("common_cancel"), role: .cancel) {}
+        } message: {
+            Text(L("delete_body"))
+        }
+        .task {
+            location.requestPermission()
+            await app.refreshMap()
+        }
+        .onChange(of: app.mapFocus) { _, id in
+            guard let id, let s = app.stickers?.first(where: { $0.id == id }) else { return }
+            app.mapFocus = nil
+            fly(to: s)
+        }
+    }
+
+    private func fly(to s: MapSticker) {
+        focus = s.point
+        selection = .one(s.id)
+    }
+
+    @ViewBuilder private func sheet(for s: MapSticker) -> some View {
+        StickerSheetView(
+            sticker: s,
+            onClose: { selection = nil },
+            actions: SheetActions(
+                onFind: {
+                    selection = nil
+                    hunt = HuntModel(kind: .find, sticker: s, position: location.last)
+                },
+                onEdit: {
+                    selection = nil
+                    editing = EditTarget(map: s)
+                },
+                onAction: { perform($0, on: s) },
+                onReveal: { Task { await app.revealSpoiler(s.id) } }
+            ),
+            hideSpoilers: app.prefs?.hideMapSpoilers ?? false,
+            revealed: app.prefs?.revealedSpoilers.contains(s.id) ?? false
+        )
+    }
+
+    private func perform(_ a: StickerAction, on s: MapSticker) {
+        switch a {
+        case .openInCollection:
+            selection = nil
+            app.collectionFocus = (s.id, s.placedByMe)
+            app.tab = .collection
+        case .report:
+            selection = nil
+            hunt = HuntModel(kind: .report, sticker: s, position: location.last)
+        case .wishlist:
+            Task { await act { try await app.map.setWishlisted(s.id, !s.wishlisted) } }
+        case .placerProfile:
+            selection = nil
+            app.push(.profile(userId: s.placedById), on: .leaderboard)
+        case .makePrivate:
+            Task { await act { try await app.map.setPrivate(s.id, !s.isPrivate) } }
+        case .archive:
+            Task { await act { try await app.map.setArchived(s.id, s.status != .archived) } }
+        case .delete:
+            deleting = s
+        }
+    }
+
+    /// A change of a bird: shown at once; a refusal is said over the map.
+    private func act(_ change: () async throws -> Sent) async {
+        do { _ = try await change() } catch { app.toast = uiText(error) }
+    }
+}
+
+/// The map's menu: what to show, and the wishlist. A native menu, the iOS way.
+private struct MapMenu: View {
+    @Environment(AppModel.self) private var app
+    let onWishlist: () -> Void
+
+    var body: some View {
+        @Bindable var app = app
+        let all = app.stickers ?? []
+        Menu {
+            Button(action: onWishlist) {
+                Label { Text(L("map_wishlist")) } icon: { Image("lucide_star") }
+            }
+            Section(L("map_filters_title")) {
+                let rows = filterRows(all, app.filters)
+                if rows.isEmpty { Text(L("map_filters_empty")) }
+                ForEach(rows, id: \.filter) { row in
+                    Toggle("\(L(row.filter.labelKey)) (\(row.count))", isOn: Binding(
+                        get: { app.filters.active.contains(row.filter) },
+                        set: { _ in app.filters = app.filters.toggled(row.filter) }
+                    ))
+                }
+            }
+            Section {
+                Toggle(L("map_show_private"), isOn: $app.filters.showPrivate)
+                Toggle(L("map_show_archived"), isOn: $app.filters.showArchived)
+                if app.filters.deviations > 0 {
+                    Button(L("map_filters_reset")) { app.filters = MapFilters() }
+                }
+            }
+        } label: {
+            LucideIcon("sliders_horizontal", size: 22)
+                .foregroundStyle(Zine.ink)
+                .frame(width: 48, height: 48)
+                .background(app.filters.deviations > 0 ? Zine.pink : Zine.panel)
+                .relief(Circle())
+                .overlay(alignment: .topTrailing) {
+                    if app.filters.deviations > 0 {
+                        Text("\(app.filters.deviations)").font(.syne(11, 800)).foregroundStyle(Zine.yellow)
+                            .frame(minWidth: 18, minHeight: 18).background(Zine.ink, in: Capsule()).offset(x: 4, y: -4)
+                    }
+                }
+        }
+        .accessibilityLabel(L("map_menu"))
+        .accessibilityIdentifier("map.menu")
+    }
+}
+
+/// The wishlist: a tap flies to the bird and opens it.
+private struct WishlistSheet: View {
+    @Environment(AppModel.self) private var app
+    let onPick: (MapSticker) -> Void
+
+    var body: some View {
+        let wished = (app.stickers ?? []).filter(\.wishlisted)
+        ScrollView {
+            VStack(alignment: .leading, spacing: 10) {
+                HStack(spacing: 8) {
+                    LucideIcon("star", size: 20)
+                    Text(L("map_wishlist")).font(.zTitleLarge)
+                }
+                .foregroundStyle(Zine.ink)
+                if wished.isEmpty {
+                    EmptyStateView(text: L("map_wishlist_empty"), pose: .search)
+                } else {
+                    StickerGallery(stickers: wished, onPick: onPick)
+                }
+            }
+            .padding(20)
         }
     }
 }
@@ -106,28 +272,13 @@ struct PressedRelief<S: Shape>: ButtonStyle {
     }
 }
 
-/// « Hors ligne » while the server hasn't confirmed the session (issue #89).
-private struct OfflineChip: View {
-    var body: some View {
-        HStack(spacing: 6) {
-            LucideIcon("cloud_off", size: 16)
-            Text(L("reach_slim")).font(.zBodySmall).lineLimit(1)
-        }
-        .foregroundStyle(Zine.yellow)
-        .padding(.horizontal, 12)
-        .padding(.vertical, 8)
-        .background(Zine.ink, in: Capsule())
-        .accessibilityIdentifier("map.offline")
-    }
-}
-
-/// Why the birds didn't refresh, with a way to try again.
+/// A message over the map, with a way to act on it (retry, dismiss).
 private struct MapNotice: View {
     let text: String
-    let retry: () -> Void
+    let action: () -> Void
 
     var body: some View {
-        Button(action: retry) {
+        Button(action: action) {
             HStack(spacing: 8) {
                 LucideIcon("refresh_cw", size: 16)
                 Text(text).font(.zBodySmall).multilineTextAlignment(.leading)
@@ -140,4 +291,8 @@ private struct MapNotice: View {
         .buttonStyle(PressedRelief(shape: RoundedRectangle(cornerRadius: Zine.radiusMedium)))
         .accessibilityIdentifier("map.notice")
     }
+}
+
+extension EditTarget: Identifiable {
+    var id: String { stickerId }
 }

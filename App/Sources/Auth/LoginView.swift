@@ -3,11 +3,13 @@ import OiseauCore
 
 /// The signed-out part: the welcome carousel, and the sign-in behind it.
 struct SignedOutFlow: View {
+    @Environment(AppModel.self) private var app
     @State private var path: [LoginMode] = []
 
     init() {}
 
     var body: some View {
+        @Bindable var app = app
         NavigationStack(path: $path) {
             WelcomeView(onLogin: { path.append(.login) })
                 .toolbar(.hidden, for: .navigationBar)
@@ -15,6 +17,66 @@ struct SignedOutFlow: View {
                     LoginView(model: LoginModel(mode: mode))
                 }
         }
+        // An e-mailed reset link (Universal Link): the new password, then the sign-in.
+        .sheet(item: Binding(get: { app.resetToken.map(ResetToken.init) }, set: { app.resetToken = $0?.value })) { token in
+            ResetPasswordView(token: token.value) {
+                app.resetToken = nil
+                path = [.login]
+            }
+        }
+    }
+}
+
+private struct ResetToken: Identifiable {
+    let value: String
+    var id: String { value }
+}
+
+/// « Nouveau mot de passe » (Android: ui/auth/ResetPasswordScreen.kt). It signs nobody in.
+struct ResetPasswordView: View {
+    @Environment(AppModel.self) private var app
+    let token: String
+    let onLogin: () -> Void
+    @State private var password = ""
+    @State private var busy = false
+    @State private var done = false
+    @State private var error: UiText?
+
+    var body: some View {
+        ScrollView {
+            VStack(spacing: 14) {
+                AuthHeader(pose: done ? .celebrate : .search, kicker: L("forgot_kicker"), title: L("reset_title"))
+                if done {
+                    Text(L("reset_done")).font(.zBodyLarge).foregroundStyle(Zine.ink).multilineTextAlignment(.center)
+                    OpButton(title: L("reset_to_login"), fullWidth: true, action: onLogin)
+                } else if token.isEmpty {
+                    Text(L("reset_invalid")).font(.zBody).foregroundStyle(Zine.error)
+                    OpButton(title: L("reset_to_login"), fullWidth: true, action: onLogin)
+                } else {
+                    OpTextField(label: L("account_new_password"), text: $password, kind: .newPassword,
+                                supporting: L("login_password_hint"), isError: !password.isEmpty && password.count < LoginModel.minPassword)
+                    if let error { Text(error.text).font(.zBody).foregroundStyle(Zine.error) }
+                    OpButton(title: busy ? L("login_busy") : L("reset_submit"), fullWidth: true) {
+                        Task {
+                            busy = true
+                            error = nil
+                            do {
+                                try await app.auth.resetPassword(token: token, newPassword: password)
+                                done = true
+                            } catch let e as ApiError {
+                                error = resetErrorMessage(e)
+                            } catch {
+                                self.error = .of("reset_failed")
+                            }
+                            busy = false
+                        }
+                    }
+                    .disabled(busy || password.count < LoginModel.minPassword)
+                }
+            }
+            .padding(24)
+        }
+        .background(Zine.paper)
     }
 }
 

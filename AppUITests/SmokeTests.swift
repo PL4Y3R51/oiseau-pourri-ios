@@ -84,14 +84,31 @@ final class SmokeTests: XCTestCase {
         XCTAssertTrue(title.waitForExistence(timeout: 10), "tapping a pin opens its sheet")
         shot("06-sheet")
 
+        XCTAssertTrue(app.buttons["sheet.find"].exists, "a bird to hunt offers « Trouver »")
+        app.buttons["sheet.find"].tap()
+        XCTAssertTrue(app.buttons["hunt.submit"].waitForExistence(timeout: 5), "the find sheet opens")
+        shot("07-find")
         app.buttons["Fermer"].firstMatch.tap()
-        app.buttons["map.menu"].tap()
-        // An action sheet or, on iOS 26, an alert: the confirm is the « Se déconnecter » that isn't the menu button.
+
+        // Each tab opens.
+        for (tab, name) in [("Collection", "08-collection"), ("Classement", "09-leaderboard"), ("Poser", "10-place"), ("Profil", "11-profile")] {
+            app.tabBars.buttons[tab].tap()
+            sleep(2)
+            shot(name)
+        }
+
+        // Sign out from Réglages.
+        app.buttons["profile.settings"].tap()
+        let signOut = app.buttons["settings.signOut"]
+        XCTAssertTrue(signOut.waitForExistence(timeout: 5))
+        shot("12-settings")
+        signOut.tap()
+        // An action sheet or, on iOS 26, an alert: the confirm is the other « Se déconnecter ».
         let confirm = app.buttons
-            .matching(NSPredicate(format: "label == %@ AND identifier != %@", "Se déconnecter", "map.menu"))
+            .matching(NSPredicate(format: "label == %@ AND identifier != %@", "Se déconnecter", "settings.signOut"))
             .firstMatch
         XCTAssertTrue(confirm.waitForExistence(timeout: 5))
-        shot("07-sign-out")
+        shot("13-sign-out")
         confirm.tap()
         XCTAssertTrue(app.buttons["welcome.next"].waitForExistence(timeout: 10), "signed out, back to the welcome")
     }

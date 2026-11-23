@@ -49,6 +49,11 @@ targets:
         NSAppTransportSecurity:
           NSAllowsLocalNetworking: true
         ITSAppUsesNonExemptEncryption: false
+        # The offline queue drains in the background when iOS allows it.
+        UIBackgroundModes: [processing, fetch]
+        BGTaskSchedulerPermittedIdentifiers: [ch.oiseaupourri.sync]
+        NSCameraUsageDescription: "L'appareil photo sert à photographier les oiseaux que tu trouves et ceux que tu poses."
+        NSPhotoLibraryUsageDescription: "Tu peux choisir une photo de ta galerie pour une trouvaille, une pose ou ton avatar."
         OPApiBaseURL: $(API_BASE_URL)
         OPWebBaseURL: $(WEB_BASE_URL)
     settings:

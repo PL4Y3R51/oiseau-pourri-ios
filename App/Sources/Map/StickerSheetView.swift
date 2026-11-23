@@ -2,23 +2,46 @@ import SwiftUI
 import UIKit
 import OiseauCore
 
-/// The bird sheet, read-only in this step (Android: ui/map/StickerSheet.kt). What it
-/// may show is decided by the server — a hint only while not found, a description
-/// only once found — and by the per-user kind.
+/// What the bird sheet can do beyond showing the bird (nil in screenshots: read-only).
+struct SheetActions {
+    var onFind: () -> Void = {}
+    var onEdit: () -> Void = {}
+    var onAction: (StickerAction) -> Void = { _ in }
+    var onReveal: () -> Void = {}
+}
+
+/// The bird sheet on the map (Android: ui/map/StickerSheet.kt). What it may show is
+/// decided by the server — a hint only while not found, a description only once
+/// found — and by the per-user kind: your trophy, your bird, or the hunt.
 struct StickerSheetView: View {
     let sticker: MapSticker
     var onClose: () -> Void = {}
-    @State private var spoilerRevealed = false
+    var actions: SheetActions?
+    var hideSpoilers = false
+    var revealed = false
+    @State private var revealedHere = false
 
-    init(sticker: MapSticker, onClose: @escaping () -> Void = {}) {
+    init(sticker: MapSticker, onClose: @escaping () -> Void = {}, actions: SheetActions? = nil, hideSpoilers: Bool = false, revealed: Bool = false) {
         self.sticker = sticker
         self.onClose = onClose
+        self.actions = actions
+        self.hideSpoilers = hideSpoilers
+        self.revealed = revealed
     }
 
     var body: some View {
         ScrollView {
-            StickerSheetContent(sticker: sticker, spoilerRevealed: $spoilerRevealed, onClose: onClose)
-                .padding(.top, 20)
+            StickerSheetContent(
+                sticker: sticker,
+                spoilerRevealed: Binding(get: { revealed || revealedHere }, set: { on in
+                    revealedHere = on
+                    if on { actions?.onReveal() }
+                }),
+                hideSpoilers: hideSpoilers,
+                onClose: onClose,
+                actions: actions
+            )
+            .padding(.top, 20)
         }
     }
 }
@@ -26,10 +49,13 @@ struct StickerSheetView: View {
 struct StickerSheetContent: View {
     let sticker: MapSticker
     @Binding var spoilerRevealed: Bool
+    var hideSpoilers = false
     var onClose: () -> Void = {}
+    var actions: SheetActions?
 
     var body: some View {
         let s = sticker
+        let canEdit = s.placedByMe && s.status != .archived && isStickerEditable(placedAt: parseIsoDate(s.placedAt) ?? .distantPast, now: Date())
         VStack(alignment: .leading, spacing: 12) {
             HStack(spacing: 12) {
                 KindBadge(kind: s.pinKind)
@@ -43,8 +69,29 @@ struct StickerSheetContent: View {
                     .foregroundStyle(Zine.muted)
                 }
                 Spacer(minLength: 0)
+                if let actions {
+                    if canEdit {
+                        Button(action: actions.onEdit) { LucideIcon("pencil", size: 18).foregroundStyle(Zine.ink).frame(width: 40, height: 44) }
+                            .accessibilityLabel(L("common_edit"))
+                    }
+                    let menu = stickerActions(s)
+                    if !menu.isEmpty {
+                        Menu {
+                            ForEach(Array(menu.enumerated()), id: \.offset) { _, a in
+                                let item = menuItem(a, s)
+                                Button(role: item.danger ? .destructive : nil) { actions.onAction(a) } label: {
+                                    Label { Text(item.title) } icon: { Image("lucide_\(item.icon)") }
+                                }
+                            }
+                        } label: {
+                            LucideIcon("ellipsis_vertical", size: 20).foregroundStyle(Zine.ink).frame(width: 40, height: 44)
+                        }
+                        .accessibilityLabel(L("common_actions"))
+                        .accessibilityIdentifier("sheet.menu")
+                    }
+                }
                 Button(action: onClose) {
-                    LucideIcon("x", size: 20).foregroundStyle(Zine.ink).frame(width: 44, height: 44)
+                    LucideIcon("x", size: 20).foregroundStyle(Zine.ink).frame(width: 40, height: 44)
                 }
                 .accessibilityLabel(L("common_close"))
             }
@@ -62,7 +109,7 @@ struct StickerSheetContent: View {
                 StatusLine(icon: "map_pin", text: L("sheet_mine"), color: Zine.pink)
                 if s.hasOpenReport == true { StatusLine(icon: "flag", text: L("sheet_reported"), color: Zine.ink) }
             } else if s.pinKind == .available {
-                if let id = s.placementPhotoId {
+                if let id = s.placementPhotoId, !hideSpoilers {
                     SpoilerPhoto(photoId: id, revealed: $spoilerRevealed)
                 }
                 if let hint = s.hint {
@@ -72,6 +119,10 @@ struct StickerSheetContent: View {
                     }
                 } else {
                     Text(L("sheet_no_hint")).font(.zBody).foregroundStyle(Zine.muted)
+                }
+                if let actions {
+                    OpButton(title: L("sheet_find"), icon: "target", fullWidth: true, action: actions.onFind)
+                        .accessibilityIdentifier("sheet.find")
                 }
             }
         }
@@ -84,6 +135,19 @@ struct StickerSheetContent: View {
     private func foundLine(_ s: MapSticker) -> String {
         guard let date = s.foundAt.flatMap(longDate) else { return L("sheet_in_collection") }
         return L("sheet_in_collection_on", date)
+    }
+}
+
+/// The « ⋯ » menu's wording and icon for an action (Android: MapScreen#stickerMenu).
+func menuItem(_ a: StickerAction, _ s: MapSticker) -> (title: String, icon: String, danger: Bool) {
+    switch a {
+    case .openInCollection: return (L("menu_open_collection"), "trophy", false)
+    case .report: return (L("menu_report"), "flag", false)
+    case .wishlist: return (L(s.wishlisted ? "menu_wishlist_remove" : "menu_wishlist_add"), "star", false)
+    case .placerProfile: return (L("menu_placer_profile"), "user_round", false)
+    case .makePrivate: return (L(s.isPrivate ? "menu_private_off" : "menu_private_on"), "house", false)
+    case .archive: return (L(s.status == .archived ? "menu_unarchive" : "menu_archive"), s.status == .archived ? "archive_restore" : "archive", false)
+    case .delete: return (L("common_delete"), "trash_2", true)
     }
 }
 
@@ -127,11 +191,13 @@ private struct StatusLine: View {
 struct AsyncPhoto: View {
     @Environment(AppModel.self) private var model
     let photoId: String
+    var thumb = false
     @State private var image: UIImage?
     @State private var failed = false
 
-    init(photoId: String) {
+    init(photoId: String, thumb: Bool = false) {
         self.photoId = photoId
+        self.thumb = thumb
     }
 
     var body: some View {
@@ -149,7 +215,7 @@ struct AsyncPhoto: View {
         .task(id: photoId) {
             guard !AppConfig.stubApi else { return }
             do {
-                if let data = try await model.api.photo(photoId), let decoded = UIImage(data: data) { image = decoded } else { failed = true }
+                if let data = try await model.api.photo(photoId, thumb: thumb), let decoded = UIImage(data: data) { image = decoded } else { failed = true }
             } catch {
                 failed = true
             }

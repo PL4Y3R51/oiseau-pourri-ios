@@ -130,7 +130,8 @@ func L(_ key: String, args: [CVarArg]) -> String {
 extension UiText {
     var text: String {
         switch self {
-        case .key(let key, let args): return L(key, args: args)
+        // Arguments travel as strings; a `%ld` in the format needs the number itself.
+        case .key(let key, let args): return L(key, args: args.map { Int($0).map { $0 as CVarArg } ?? $0 })
         case .raw(let s): return s
         }
     }
@@ -139,4 +140,11 @@ extension UiText {
 /// What a failed call says to the player.
 func uiText(_ error: Error) -> UiText {
     (error as? ApiError)?.toUiText() ?? .of("error_network")
+}
+
+/// ApiError's answers on any error, so a `catch` reads the same whether Swift inferred
+/// the thrown type or not (an ApiError's own members win when it did).
+extension Error {
+    var isUnavailable: Bool { (self as? ApiError)?.isUnavailable ?? false }
+    func toUiText() -> UiText { uiText(self) }
 }

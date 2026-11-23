@@ -11,18 +11,21 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  models:
+    name: Generated models are up to date
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - run: node tools/gen-models.mjs --check
+
   core:
     name: OiseauCore (Linux)
     runs-on: ubuntu-latest
     container: swift:latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
-      - name: Node, for the models check
-        run: |
-          apt-get update -qq && apt-get install -y -qq nodejs > /dev/null
-          node --version
-      - name: Generated models are up to date
-        run: node tools/gen-models.mjs --check
       - name: swift test
         run: swift test 2>&1 | tee core.log
         shell: bash -o pipefail {0}

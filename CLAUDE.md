@@ -6,9 +6,13 @@ Mac, so CI runs on GitHub's free macOS runners. Read `README.md` first.
 
 ## How to work here
 
-- **The Android app is the reference.** A screen or rule is translated from its Android
-  file (named in a comment), not redesigned. The spec is `oiseaupourri-cahier-des-charges-v4.md`
-  in the main repository.
+- **The Android app is the reference for what the app does**: rules, flows, wording. A
+  screen or rule is translated from its Android file (named in a comment). The spec is
+  `oiseaupourri-cahier-des-charges-v4.md` in the main repository.
+- **It is not a pixel copy of Android.** Keep the brand (Zine colours, Syne, the relief,
+  the mascot), but where iOS has its own pattern, use it: system sheets with detents,
+  the navigation back button and swipe, alerts and confirmation dialogs, native pickers,
+  haptics. A subtly different UI is fine; a Material component rebuilt by hand is not.
 - **Strings, contract and assets are never edited by hand**: `node tools/sync-from-monorepo.mjs`
   brings them from the main repository's `origin/main`, then `node tools/gen-models.mjs`. A
   string the iOS app alone needs goes in `project.yml` (Info.plist texts) or, if it is a

@@ -11,6 +11,8 @@ struct BirdMap: UIViewRepresentable {
     var showsUser: Bool
     /// Bumped by the « Me localiser » button: recentre on the player.
     var locateRequest: Int
+    /// A bird to fly to (« Voir sur la carte », the wishlist).
+    var focus: GeoPoint? = nil
     var onTap: ([MapSticker]) -> Void
 
     func makeCoordinator() -> Coordinator { Coordinator(self) }
@@ -44,12 +46,17 @@ struct BirdMap: UIViewRepresentable {
         if previous.locateRequest != locateRequest, let here = view.userLocation?.location?.coordinate {
             view.setCenter(here, zoomLevel: max(view.zoomLevel, 16), animated: true)
         }
+        if let focus, focus != previous.focus || coordinator.firstFocus {
+            coordinator.firstFocus = false
+            view.setCenter(CLLocationCoordinate2D(latitude: focus.lat, longitude: focus.lng), zoomLevel: max(view.zoomLevel, 16), animated: true)
+        }
         coordinator.render(on: view)
     }
 
     final class Coordinator: NSObject, MLNMapViewDelegate {
         var parent: BirdMap
         var styleLoaded = false
+        var firstFocus = true
         private static let source = "birds"
         private static let layer = "birds"
 
